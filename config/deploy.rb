@@ -1,11 +1,11 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'cometogether'
+set :application, 'sattilite'
 
 
 set :scm, :git
-set :repo_url, 'git@bitbucket.org:OrelSokolov/cometogether.git'
+set :repo_url, 'git@github.com:OrelSokolov/Sattilite.git'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.1.2'
@@ -18,8 +18,8 @@ set :keep_releases, 5
 
 
 # files we want symlinking to specific entries in shared.
-set :linked_files, %w{config/database.yml}
-set :linked_files, %w{config/application.yml}
+# set :linked_files, %w{config/database.yml}
+# set :linked_files, %w{config/application.yml}
 
 # set(:config_files, %w(
 #   nginx.conf
@@ -142,7 +142,7 @@ namespace :deploy do
   task :register_services do
     on roles(:all) do |host|
       execute :sudo, "update-rc.d unicorn_#{fetch(:application)} defaults"
-      execute :sudo, "systemctl daemon-reload"
+      # execute :sudo, "systemctl daemon-reload"
     end
   end
   after "deploy:generate_services_files", "deploy:register_services"
