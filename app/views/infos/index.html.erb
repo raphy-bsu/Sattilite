@@ -1,19 +1,25 @@
-<div class="col-md-6 col-md-offset-3">
-  <h1>История данных</h1>
-  <table class="table">
-    <thead>
-        <th>Температура</th>
-        <th>Влажность</th>
-        <th>Дата создания</th>
-    </thead>
-    <tbody>
-      <% @data.each do |record| %>
-        <tr>
-          <td><%= record.try(:temp) %></td>
-          <td><%= record.try(:hum) %></td>
-          <td><%= record.try(:created_at) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="row">
+  <div class="col-md-6" >
+    <h1>История данных</h1>
+    <table class="table table-striped">
+      <thead>
+          <th>Температура</th>
+          <th>Влажность</th>
+          <th>Дата создания</th>
+      </thead>
+      <tbody>
+        <% @ordered.each do |record| %>
+          <tr>
+            <td><%= record.try(:temp) %></td>
+            <td><%= record.try(:hum) %></td>
+            <td><%= record.try(:created_at).try(:strftime, "%T, %D") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h1>График температуры и влажности</h1>
+    <canvas id="temp_chart" width="600" height="400"></canvas>
+  </div>
 </div>
