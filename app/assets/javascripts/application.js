@@ -18,6 +18,27 @@
 
 var chartData = {};
 
+function legend(parent, data) {
+    parent.className = 'legend';
+    var datas = data.hasOwnProperty('datasets') ? data.datasets : data;
+
+    // remove possible children of the parent
+    while(parent.hasChildNodes()) {
+        parent.removeChild(parent.lastChild);
+    }
+
+    datas.forEach(function(d) {
+        var title = document.createElement('span');
+        title.className = 'title';
+        title.style.borderColor = d.hasOwnProperty('strokeColor') ? d.strokeColor : d.color;
+        title.style.borderStyle = 'solid';
+        parent.appendChild(title);
+
+        var text = document.createTextNode(d.title);
+        title.appendChild(text);
+    });
+}
+
 var GetChartData = function () {
     $.ajax({
         url: '/infos.json',
@@ -29,6 +50,7 @@ var GetChartData = function () {
                 labels: d["labels"],
                 datasets: [
                     {
+                        title: "Температура",
                         fillColor: "rgba(220,220,220,0.5)",
                         strokeColor: "rgba(220,220,220,1)",
                         pointColor: "rgba(220,220,220,1)",
@@ -36,7 +58,7 @@ var GetChartData = function () {
                         data: d["temps"]
                     },
                     {
-                        label: "Влажность",
+                        title: "Влажность",
                         fillColor: "rgba(151,187,205,0.2)",
                         strokeColor: "rgba(151,187,205,1)",
                         pointColor: "rgba(151,187,205,1)",
@@ -48,6 +70,7 @@ var GetChartData = function () {
 
                 ]
             };
+           legend(document.getElementById("lineLegend"), chartData);
 
         }
     });
