@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rake'
 gem 'rails', '4.1.5'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -24,7 +25,11 @@ gem 'spring',        group: :development
 gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
