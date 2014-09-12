@@ -149,8 +149,7 @@ namespace :deploy do
 
   task :restart_services do
     on roles(:all) do |host|
-      execute :sudo, "service unicorn_#{fetch(:application)} stop"
-      execute :sudo, "service unicorn_#{fetch(:application)} start"
+      execute :sudo, "service unicorn_#{fetch(:application)} restart"
       execute :sudo, "service nginx restart"
     end
   end
