@@ -5,7 +5,7 @@ set :application, 'sattilite'
 
 
 set :scm, :git
-set :repo_url, 'git@github.com:OrelSokolov/Sattilite.git'
+set :repo_url, 'https://github.com/OrelSokolov/Sattilite'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.1.2'
