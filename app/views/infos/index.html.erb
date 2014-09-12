@@ -1,0 +1,19 @@
+<div class="col-md-6 col-md-offset-3">
+  <h1>История данных</h1>
+  <table class="table">
+    <thead>
+        <th>Температура</th>
+        <th>HUM</th>
+        <th>Дата создания</th>
+    </thead>
+    <tbody>
+      <% @data.each do |record| %>
+        <tr>
+          <td><%= record.try(:temp) %></td>
+          <td><%= record.try(:hum) %></td>
+          <td><%= record.try(:created_at) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

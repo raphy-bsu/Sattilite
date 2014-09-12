@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :data
+  resources :infos
 
-  root 'public#index'
-  get '/update', to: 'public#update'
+  root 'infos#index'
+  get '/update', to: 'infos#update'
 end
