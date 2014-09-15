@@ -17,4 +17,9 @@ class InfosController < ApplicationController
     Info.create(@params)
     redirect_to :root
   end
+
+  def clean
+    Info.destroy_all
+    redirect_to :root
+  end
 end

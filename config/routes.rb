@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root 'infos#index'
   get '/update', to: 'infos#update'
+  post '/clean', to: 'infos#clean', as: :clean_infos
 end

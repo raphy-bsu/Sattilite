@@ -79,22 +79,26 @@ var GetChartData = function () {
 
 function respondCanvas() {
     var c = $('#temp_chart');
-    var ctx = c.get(0).getContext("2d");
-    var container = c.parent();
+    if (c.length > 0) {
+        var ctx = c.get(0).getContext("2d");
+        var container = c.parent();
 
-    var $container = $(container);
+        var $container = $(container);
 
-    c.attr('width', $container.width()); //max width
+        c.attr('width', $container.width()); //max width
 
-    c.attr('height', $container.height()); //max height                   
+        c.attr('height', $container.height()); //max height                   
 
-    //Call a function to redraw other content (texts, images etc)
-    var chart = new Chart(ctx).Line(chartData);
+        //Call a function to redraw other content (texts, images etc)
+        var chart = new Chart(ctx).Line(chartData);
+    }
 }
 
 
 $(document).ready(function() {
     $(window).resize(setTimeout(respondCanvas, 500));
 
-    GetChartData();
+    if($('#temp_chart').length > 0){
+        GetChartData();
+    }
 });
