@@ -50,7 +50,7 @@ var GetChartData = function () {
                 labels: d["labels"],
                 datasets: [
                     {
-                        title: "Температура",
+                        title: "Температура, ℃",
                         fillColor: "rgba(220,220,220,0.5)",
                         strokeColor: "rgba(220,220,220,1)",
                         pointColor: "rgba(220,220,220,1)",
@@ -58,7 +58,7 @@ var GetChartData = function () {
                         data: d["temps"]
                     },
                     {
-                        title: "Влажность",
+                        title: "Влажность, %",
                         fillColor: "rgba(151,187,205,0.2)",
                         strokeColor: "rgba(151,187,205,1)",
                         pointColor: "rgba(151,187,205,1)",
