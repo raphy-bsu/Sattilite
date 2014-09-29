@@ -1,0 +1,3 @@
+[submodule "app/assets/images/logo"]
+	path = app/assets/images/logo
+	url = https://github.com/raphy-bsu/logo
