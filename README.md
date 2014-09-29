@@ -13,7 +13,7 @@ Data storage and handler application for univeristy satellite
 
 ## Authors
 
-Inspired by [Evgenij Krivosheev](/Evgeneus). Coded by [Oleg Orlov](/OrelSokolov)
+Inspired by [Evgenij Krivosheev](github.com/Evgeneus). Coded by [Oleg Orlov](github.com/OrelSokolov)
 
 ## How to contribute
 
