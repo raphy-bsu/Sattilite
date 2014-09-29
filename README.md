@@ -11,3 +11,7 @@ Data storage and handler application for univeristy satellite
 * cd Sattilite
 * bundle
 
+## Authors
+
+Inspired by Evgenij Krivosheev. Coded by Oleg Orlov
+
