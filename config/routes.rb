@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'public/about'
+
   resources :infos
 
   root 'infos#index'
