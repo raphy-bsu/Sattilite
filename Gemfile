@@ -32,6 +32,10 @@ group :development do
   gem 'capistrano-rbenv'
 end
 
+# Use rest-client for generating queries
+gem 'rest-client'
+#Use colorize to colourful console messages
+gem 'colorize'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
