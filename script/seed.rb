@@ -1,7 +1,7 @@
 require 'rest_client'
 require 'csv'
 
-host = "localhost:3000"
+host = ARGV.first || "localhost:3000"
 file = 'data/seed_data.csv'
 
 if File.exists?(file)
