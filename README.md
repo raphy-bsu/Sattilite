@@ -28,4 +28,5 @@ Inspired by [Evgenij Krivosheev](https://github.com/Evgeneus). Coded by [Oleg Or
 
 ## How to use
 
-* You should run scripts in your project's root folder
+* To emulate satellite work run seed script:
+`ruby script/seed.rb [host]`
