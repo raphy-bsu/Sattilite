@@ -14,7 +14,7 @@ file = 'data/seed_data.csv'
       begin
         RestClient.get(host + '/update', :params => {:temp => row['temp'], :hum => row['hum']})
       rescue Errno::ECONNREFUSED => msg
-        puts (msg.to_s + ". Probably, try to start your local server").colorize(:red)
+        puts (msg.to_s + ". No connection to the server.").colorize(:red)
         break
       end
       puts "Successfully sent data!".colorize(:green)
