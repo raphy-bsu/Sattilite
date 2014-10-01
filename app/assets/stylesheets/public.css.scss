@@ -1,3 +1,23 @@
 // Place all the styles related to the public controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.logo {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
+  margin: 20px 0;
+}
+
+.logo img {
+  border: 2px dashed;
+  width: 100%;
+  height: 400px;
+}
+
+.col-md-5 {
+  border: 3px solid yellow;
+margin: 0;
+}
+
+.row {
+  border: 2px solid green;
+}
