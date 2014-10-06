@@ -25,8 +25,9 @@
       <h1>График температуры и влажности</h1>
       <div id="lineLegend"></div>
       <canvas id="temp_chart" width="600" height="400"></canvas>
-      <div class="text-center">
-        <%= link_to "About", about_path, class: "btn btn-primary"%>
+      <div class="copyright row">
+        &copy; Raphy BSU Team, 2014
+        <%= link_to "О проекте", about_path, class: "pull-right"%>
       </div>
     </div>
   <% else %>
