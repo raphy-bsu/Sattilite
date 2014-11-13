@@ -11,6 +11,12 @@ Data storage and handler application for univeristy satellite
 * cd Sattilite
 * bundle
 
+## How to deploy
+
+````
+git push heroku master
+```
+
 ## Authors
 
 Inspired by [Evgenij Krivosheev](https://github.com/Evgeneus). Coded by [Oleg Orlov](https://github.com/OrelSokolov)
