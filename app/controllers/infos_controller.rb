@@ -8,6 +8,9 @@ class InfosController < ApplicationController
     respond_to do |format|
       format.html
       format.json
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="data.xlsx"'
+      }
     end
   end
 

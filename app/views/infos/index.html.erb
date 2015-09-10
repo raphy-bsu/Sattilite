@@ -1,9 +1,17 @@
 <div class="row">
   <% unless Info.all.count.zero? %>
     <div class="col-md-6" >
-      <h1>История данных
-          <%= link_to 'Очистить', clean_infos_path, method: :post, class: 'btn btn-danger pull-right' %>
-      </h1>
+      <div class="header-panel">
+        <%= link_to(infos_path(format: :xlsx), class: 'btn btn-primary pull-right') do %>
+          <%= fa_icon "download" %>
+          Excel
+        <% end %>
+        <%= link_to(clean_infos_path, method: :post, class: 'btn btn-danger pull-right') do %>
+          <%= fa_icon "trash" %>
+          Очистить
+        <% end %>
+        <h1>История данных</h1>
+      </div>
       <table class="table table-striped">
         <thead>
             <th>Температура</th>

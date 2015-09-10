@@ -11,6 +11,7 @@ file = 'data/seed_data.csv'
   if File.exists?(file)
     puts "SCV file exists".green
     CSV.foreach(file, headers: true)  do |row|
+      sleep 1
       begin
         RestClient.get(host + '/update', :params => {:temp => row['temp'], :hum => row['hum']})
       rescue Errno::ECONNREFUSED => msg

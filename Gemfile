@@ -14,6 +14,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'axlsx'
+gem 'axlsx_rails'
+
+gem "font-awesome-rails"
 
 
 gem 'annotate'
