@@ -13,6 +13,10 @@ gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'axlsx'
+
+
+gem 'annotate'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
