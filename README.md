@@ -4,7 +4,7 @@ Data storage and handler application for univeristy satellite
 
 ## How to install
 
-* rbenv install 2.1.3
+* rbenv install 2.2.2
 * git pull https://github.com/OrelSokolov/Sattilite
 * git submodule init
 * git submodule update
