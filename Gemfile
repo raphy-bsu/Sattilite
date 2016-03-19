@@ -10,6 +10,12 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass'
+gem 'bootstrap-generators', '~> 3.3.4'
+gem 'chartkick'
+gem "slim-rails"
+gem 'groupdate'
+gem 'hightop'
+gem 'active_median'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
@@ -48,3 +54,7 @@ gem 'colorize'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-underscore'
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 1
+  temperature: 1.5
+  humidity: 1.5
+
+two:
+  time: 1
+  temperature: 1.5
+  humidity: 1.5

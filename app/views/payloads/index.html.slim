@@ -1,0 +1,33 @@
+.page-header
+  = link_to new_payload_path, class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-plus
+    |  New Payload
+  h1
+    | Payload
+
+
+h2.text-center Temperature(time)
+= column_chart @payloads.pluck(:time, :temperature).last(12)
+
+h2.text-center Humidity(time)
+= column_chart @payloads.pluck(:time, :humidity).last(12)
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Time
+        th
+          | Temperature
+        th
+          | Humidity
+    tbody
+      - @payloads.each do | payload |
+        tr
+          td
+            = payload.time
+          td
+            = payload.temperature
+          td
+            = payload.humidity

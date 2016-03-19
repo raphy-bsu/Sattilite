@@ -7,6 +7,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.1.5)
       actionpack (= 4.1.5)
@@ -21,6 +22,8 @@ GEM
       activesupport (= 4.1.5)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_median (0.1.2)
+      activerecord
     activemodel (4.1.5)
       activesupport (= 4.1.5)
       builder (~> 3.1)
@@ -45,6 +48,8 @@ GEM
     axlsx_rails (0.4.0)
       axlsx (>= 2.0.1)
       rails (>= 3.1)
+    bootstrap-generators (3.3.4)
+      railties (>= 3.1.0)
     builder (3.2.2)
     capistrano (3.2.1)
       i18n
@@ -59,6 +64,7 @@ GEM
     capistrano-rbenv (2.0.2)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    chartkick (1.4.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -71,6 +77,10 @@ GEM
     execjs (2.2.1)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
+    groupdate (2.5.2)
+      activesupport (>= 3)
+    hightop (0.1.4)
+      activerecord
     hike (1.2.3)
     htmlentities (4.3.4)
     i18n (0.6.11)
@@ -110,6 +120,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.5)
       sprockets-rails (~> 2.0)
+    rails-assets-underscore (1.8.3)
     railties (4.1.5)
       actionpack (= 4.1.5)
       activesupport (= 4.1.5)
@@ -132,6 +143,15 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    slim (3.0.6)
+      temple (~> 0.7.3)
+      tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.0.1)
+      actionmailer (>= 3.1, < 5.0)
+      actionpack (>= 3.1, < 5.0)
+      activesupport (>= 3.1, < 5.0)
+      railties (>= 3.1, < 5.0)
+      slim (~> 3.0)
     spring (1.1.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -147,6 +167,7 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    temple (0.7.6)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -169,24 +190,31 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_median
   annotate
   axlsx
   axlsx_rails
+  bootstrap-generators (~> 3.3.4)
   bootstrap-sass!
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv
+  chartkick
   coffee-rails (~> 4.0.0)
   colorize
   font-awesome-rails
+  groupdate
+  hightop
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.1.5)
+  rails-assets-underscore!
   rake
   rest-client
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  slim-rails
   spring
   sqlite3
   turbolinks
@@ -194,4 +222,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

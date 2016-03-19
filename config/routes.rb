@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :payloads
+
   resources :infos
 
   root 'infos#index'
