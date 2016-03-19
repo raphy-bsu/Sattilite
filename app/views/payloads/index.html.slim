@@ -9,5 +9,5 @@
 .text-center
   = will_paginate @payloads, renderer: BootstrapPagination::Rails
 h2.text-center Temperature(time)
-= column_chart @payloads.pluck(:time, :temperature)
+= column_chart @payloads.pluck(:time, :temperature), xtitle: "Time", ytitle: "Temperature"
 
