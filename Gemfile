@@ -21,6 +21,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'axlsx'
 gem 'axlsx_rails'
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 
 gem "font-awesome-rails"
 

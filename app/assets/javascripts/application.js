@@ -87,7 +87,7 @@ function respondCanvas() {
 
         c.attr('width', $container.width()); //max width
 
-        c.attr('height', $container.height()); //max height                   
+        c.attr('height', $container.height()); //max height
 
         //Call a function to redraw other content (texts, images etc)
         var chart = new Chart(ctx).Line(chartData);

@@ -5,7 +5,7 @@ class PayloadsController < ApplicationController
   # GET /payloads
   # GET /payloads.json
   def index
-    @payloads = Payload.all
+    @payloads = Payload.paginate(:page => params[:page], :per_page => 30)
   end
 
   # GET /payloads/1

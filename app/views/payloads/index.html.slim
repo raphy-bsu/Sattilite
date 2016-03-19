@@ -6,28 +6,8 @@
     | Payload
 
 
+.text-center
+  = will_paginate @payloads, renderer: BootstrapPagination::Rails
 h2.text-center Temperature(time)
-= column_chart @payloads.pluck(:time, :temperature).last(12)
+= column_chart @payloads.pluck(:time, :temperature)
 
-h2.text-center Humidity(time)
-= column_chart @payloads.pluck(:time, :humidity).last(12)
-
-.table-responsive
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th
-          | Time
-        th
-          | Temperature
-        th
-          | Humidity
-    tbody
-      - @payloads.each do | payload |
-        tr
-          td
-            = payload.time
-          td
-            = payload.temperature
-          td
-            = payload.humidity
