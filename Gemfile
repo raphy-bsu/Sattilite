@@ -23,6 +23,7 @@ gem 'axlsx'
 gem 'axlsx_rails'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+gem 'airbrake', '~> 5.0'
 
 gem "font-awesome-rails"
 

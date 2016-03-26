@@ -37,6 +37,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    airbrake (5.2.2)
+      airbrake-ruby (~> 1.2)
+    airbrake-ruby (1.2.1)
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -196,6 +199,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_median
+  airbrake (~> 5.0)
   annotate
   axlsx
   axlsx_rails
