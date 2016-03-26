@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'informant-rails', group: :production
+
 # Use Capistrano for deployment
 group :development do
   gem 'sqlite3'
