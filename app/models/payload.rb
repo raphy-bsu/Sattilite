@@ -13,6 +13,5 @@
 class Payload < ActiveRecord::Base
   validates :time, presence: true
   validates :temperature, presence: true
-  validates
-  :humidity, presence: true
+  validates :humidity, presence: true
 end
