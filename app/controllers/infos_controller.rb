@@ -17,8 +17,12 @@ class InfosController < ApplicationController
   # Non restful, but nobody cares
   def update
     @params = params.permit(:temp, :hum)
-    Info.create(@params)
-    redirect_to :root
+    if @params[:temp].nil? || @params[:hum].nil?
+      render text: 'Please, specify "temp" and "hum" params'
+    else
+      Info.create(@params)
+      redirect_to :root
+    end
   end
 
   def clean

@@ -10,4 +10,6 @@
 #
 
 class Info < ActiveRecord::Base
+  validates :hum, presence: true
+  validates :temp, presence: true
 end
