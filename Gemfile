@@ -26,6 +26,8 @@ gem 'axlsx_rails'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'airbrake', '~> 5.0'
+gem 'simple_form'
+gem 'nested_scaffold'
 
 gem "font-awesome-rails"
 
