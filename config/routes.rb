@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  resources :values
+
+  resources :sensors
+
+  resources :categories
+
   resources :payloads
 
   resources :infos

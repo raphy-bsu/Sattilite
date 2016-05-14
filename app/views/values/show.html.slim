@@ -1,0 +1,34 @@
+.page-header
+  = link_to values_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_value_path(@value), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show value
+dl.dl-horizontal
+  dt
+    | Type:
+  dd
+    = @value.type
+  dt
+    | Val float:
+  dd
+    = @value.val_float
+  dt
+    | Val int:
+  dd
+    = @value.val_int
+  dt
+    | Val str:
+  dd
+    = @value.val_str
+  dt
+    | Val bool:
+  dd
+    = @value.val_bool
+  dt
+    | Sensor:
+  dd
+    = @value.sensor

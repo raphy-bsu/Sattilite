@@ -1,0 +1,13 @@
+= simple_form_for(@value) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :type
+    = f.input :val_float
+    = f.input :val_int
+    = f.input :val_str
+    = f.input :val_bool
+    = f.association :sensor
+
+  .form-actions
+    = f.button :submit

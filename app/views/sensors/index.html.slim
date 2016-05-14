@@ -1,0 +1,31 @@
+.page-header
+  = link_to new_sensor_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Sensor
+  h1
+    | Listing sensors
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Category
+        th
+        th
+        th
+    tbody
+      - @sensors.each do | sensor |
+        tr
+          td
+            = sensor.name
+          td
+            = sensor.category
+          td
+            = link_to 'Show', sensor
+          td
+            = link_to 'Edit', edit_sensor_path(sensor) 
+          td
+            = link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } 
