@@ -1,0 +1,114 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content=""
+    meta name="author" content=""
+    title
+      | Спутник БГУ
+  = stylesheet_link_tag    'public', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'public', 'data-turbolinks-track' => true
+  = javascript_include_tag "https://www.google.com/jsapi", "chartkick"
+  = csrf_meta_tags
+  body
+    .container
+      - flash.each do |name, msg|
+        = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
+          button.close type="button" data-dismiss="alert"
+            span aria-hidden="true"
+              | &times;
+            span.sr-only
+              | Close
+          = msg
+
+  body
+    #header
+      .wrapper.clearfix
+        #logo
+          a href=root_url class="logo" sputnik
+        ul#navigation
+          li.selected
+            a href="index.html"  Home
+          li
+            a href="about.html"  About
+          li
+            a href="blog.html"  Blog
+          li
+            a href="gallery.html"  Gallery
+          li
+            a href="contact.html"  Contact Us
+    #contents
+      #adbox
+        .wrapper.clearfix
+          .info
+            h1 Sonsectetur adipiscing elit.
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae quam et tortor consequat porta. Sed faucibus, ligula quis mollis lobortis, diam felis tempus enim, a vestibulum eros quam ac magna. Vestibulum varius porttitor elit, et vulputate odio egestas sit amet.
+        .highlight
+          h2
+            | Lorem ipsum dolor sit amet -
+            i consectetur adipiscing elit.
+      .body.clearfix
+        .click-here
+          h1 Lorem Ipsum Dolor!
+          a.btn2 href="index.html"  Click Here!
+        p style="font-size:12px;"
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula. Praesent aliquam semper massa et scelerisque. Suspendisse dapibus interdum diam, non varius nisl laoreet at. Pellentesque imperdiet molestie sollicitudin. Sed nec magna nibh, sed interdum nisi. Mauris vel pretium nibh. Morbi congue velit quis eros imperdiet ac el eifend elit condimentum. Nulla vestibulum dictum tellus quis iaculis. Duis a diam vitae sem tristique vestibulum. Praesent dapibus, tortor nec hendrerit pulvinar, lectus tortor viverra ante,
+    #footer
+      ul#featured.wrapper.clearfix
+        li
+          img alt="Img" height="204" src="assets/astronaut.jpg" width="220" /
+          h3
+            a href="blog.html"  Category 1
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula.
+        li
+          img alt="Img" height="204" src="assets/earth.jpg" width="220" /
+          h3
+            a href="blog.html"  Category 2
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula.
+        li
+          img alt="Img" height="204" src="assets/spacecraft-small.jpg" width="220" /
+          h3
+            a href="blog.html"  Category 3
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula.
+        li
+          img alt="Img" height="204" src="assets/space-shuttle.jpg" width="220" /
+          h3
+            a href="blog.html"  Category 4
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula.
+      .body
+        .wrapper.clearfix
+          #links
+            div
+              h4 Social
+              ul
+                li
+                  a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank"  Google +
+                li
+                  a href="http://freewebsitetemplates.com/go/facebook/" target="_blank"  Facebook
+                li
+                  a href="http://freewebsitetemplates.com/go/youtube/" target="_blank"  Youtube
+            div
+              h4 Heading placeholder
+              ul
+                li
+                  a href="index.html"  Link Title 1
+                li
+                  a href="index.html"  Link Title 2
+                li
+                  a href="index.html"  Link Title 3
+          #newsletter
+            h4 Newsletter
+            p
+              | Sign up for Our Newsletter
+            form action="index.html" method="post"
+              input type="text" value="" /
+              input type="submit" value=("Sign Up!") /
+          p.footnote
+            | © Copyright © 2023.Company name all rights reserved

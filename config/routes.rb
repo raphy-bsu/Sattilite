@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :posts
 
-  resources :values
-
-  resources :sensors
-
-  resources :categories
+  resources :categories do
+    resources :sensors do
+      resources :values
+    end
+  end
 
   resources :payloads
 
   resources :infos
 
-  root 'infos#index'
+  root 'public#index'
   get '/update', to: 'infos#update'
   post '/clean', to: 'infos#clean', as: :clean_infos
   get '/about', to: 'public#about'

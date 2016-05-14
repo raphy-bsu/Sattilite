@@ -50,6 +50,7 @@ gem 'unicorn'
 group :development do
   gem 'sqlite3'
 
+  gem 'better_errors'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
