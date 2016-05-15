@@ -31,7 +31,7 @@ img {
 	visibility:hidden;
 }
 /*------------------------------ HEADER ------------------------------*/
-.btn1, .btn2, .btn3, #newsletter input {
+.btn1, .btn2, .btn3, input {
 	background: image-url('interface.png') no-repeat;
 }
 .btn1, .btn2, .btn3 {
@@ -285,6 +285,7 @@ img {
 .list li a.more:hover {
 	color: #c3e9fe;
 }
+
 /** pagination **/
 .pagination {
 	display: inline-block;
@@ -337,6 +338,8 @@ img {
 	top: 0;
 	left: 0;
 }
+
+
 /** Contact **/
 #contact form {
 	width: 709px;
@@ -408,38 +411,45 @@ img {
 	margin-right: 10px;
 	padding: 0;
 }
+
 #contact input[type='submit'] {
 	cursor: pointer;
 	border: 0;
 	margin-top: 3px;
 	margin-left: 5px;
 }
+
 #contact div.checkbox label {
 	cursor: pointer;
 }
+
 /*------------------------------ FOOTER ------------------------------*/
 #footer {
-	background-color: #e8eff4;
-	border-top: 1px solid #fdfcfc;
+  background-color: #e8eff4;
+  border-top: 1px solid #fdfcfc;
+
+  .body {
+    background: #072438 image-url('bg-footer.jpg') no-repeat center top;
+    min-height: 136px;
+    padding: 36px 0;
+  }
+
+  h4 {
+    color: #fff;
+    font: normal 14px Georgia, "Times New Roman", Times, serif;
+    margin: 0 0 12px;
+  }
+
+  p {
+    color: #7890a1;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 6px;
+  }
+
 }
-#footer .body {
-	background: #072438 image-url('bg-footer.jpg') no-repeat center top;
-	min-height: 136px;
-	padding: 36px 0;
-}
-#footer h4 {
-	color: #fff;
-	font: normal 14px Georgia, "Times New Roman", Times, serif;
-	margin: 0 0 12px;
-}
-#footer p {
-	color: #7890a1;
-	font-size: 12px;
-	line-height: 24px;
-	margin: 0;
-	padding: 0 0 6px;
-}
-/** featured **/
+
 #featured {
 	display: block;
 	list-style: none;
@@ -470,72 +480,89 @@ img {
 	font-size: 12px;
 	text-align: center;
 }
+
 /** links **/
 #links {
-	float: left;
-	width: 460px;
-	margin: 0 10px;
+  float: left;
+  width: 460px;
+  margin: 0 10px;
+
+  ul {
+    list-style: none;
+    width: 178px;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    background: image-url('border-footer.png') repeat-x left bottom;
+    margin: 0 0 6px;
+    padding: 3px 0 8px;
+  }
+
+  ul li:first-child {
+    padding-top: 0;
+  }
+
+  ul li a {
+    color: #7890a1;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+  ul li a:hover {
+    color: #e8eff4;
+  }
 }
+
 #links > div {
-	float: left;
-	width: 230px;
+  float: left;
+  width: 230px;
 }
-#links ul {
-	list-style: none;
-	width: 178px;
-	margin: 0;
-	padding: 0;
-}
-#links ul li {
-	background: image-url('border-footer.png') repeat-x left bottom;
-	margin: 0 0 6px;
-	padding: 3px 0 8px;
-}
-#links ul li:first-child {
-	padding-top: 0;
-}
-#links ul li a {
-	color: #7890a1;
-	font-size: 12px;
-	line-height: 24px;
-	text-decoration: none;
-}
-#links ul li a:hover {
-	color: #e8eff4;
-}
+
 /** newsletter **/
-#newsletter {
+
+#newsletter,
+.devise {
 	float: left;
 	width: 460px;
 	margin: 0 10px 10px;
+
+  form {
+    display: inline-block;
+  }
+
+  input {
+    float: left;
+    font: 12px/36px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    height: 36px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  input[type='text'] {
+    background-position: 0 bottom;
+    width: 282px;
+    margin-right: 24px;
+    padding-left: 6px;
+    padding-right: 6px
+  }
+
+  input[type='submit'] {
+    background-position: -304px bottom;
+    color: #fff;
+    cursor: pointer;
+    width: 102px;
+  }
+
+  input[type='submit']:hover {
+    background-position: right bottom;
+  }
+
 }
-#newsletter form {
-	display: inline-block;
-}
-#newsletter input {
-	float: left;
-	font: 12px/36px "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	height: 36px;
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-#newsletter input[type='text'] {
-	background-position: 0 bottom;
-	width: 282px;
-	margin-right: 24px;
-	padding-left: 6px;
-	padding-right: 6px
-}
-#newsletter input[type='submit'] {
-	background-position: -304px bottom;
-	color: #fff;
-	cursor: pointer;
-	width: 102px;
-}
-#newsletter input[type='submit']:hover {
-	background-position: right bottom;
-}
+
 #footer .footnote {
 	float: right;
 	display: inline-block;

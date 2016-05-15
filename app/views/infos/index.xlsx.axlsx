@@ -1,9 +1,0 @@
-
-wb = xlsx_package.workbook
-
-wb.add_worksheet(name: "Data") do |sheet|
-  sheet.add_row ["Температура", "Влажность", "Дата создания"]
-  Info.all.sort_by{|i| i.created_at}.reverse.each do |i|
-    sheet.add_row [i.temp, i.hum, "'#{i.created_at}'"]
-  end
-end

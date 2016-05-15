@@ -20,7 +20,8 @@ gem 'slim'
 gem 'groupdate'
 gem 'hightop'
 gem 'active_median'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.0.5'
+gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'jbuilder', '~> 2.0'
 gem 'axlsx'
 gem 'axlsx_rails'
@@ -31,6 +32,9 @@ gem 'simple_form'
 gem 'nested_scaffold'
 
 gem "font-awesome-rails"
+
+gem 'sweetalert-rails', '0.5.0'
+gem 'sweet-alert-confirm', git: 'https://github.com/mois3x/sweet-alert-rails-confirm'
 
 
 gem 'annotate'

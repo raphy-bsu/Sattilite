@@ -7,30 +7,12 @@ html
     meta name="description" content=""
     meta name="author" content=""
     title
-      | Starter Template for Bootstrap
-    /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
-    /[if lt IE 9]
-      = javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    = javascript_include_tag "https://www.google.com/jsapi", "chartkick"
-    = csrf_meta_tags
+      | Спутник БГУ
+  = stylesheet_link_tag    'public', media: 'all'
+  = javascript_include_tag 'public'
+  = javascript_include_tag "https://www.google.com/jsapi", "chartkick"
+  = csrf_meta_tags
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
-            span.sr-only
-              | Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          = link_to "Спутник", root_url, class: "navbar-brand"
-        #navbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active
-              a href=payloads_path
-                | Payloads
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
@@ -40,4 +22,44 @@ html
             span.sr-only
               | Close
           = msg
+
+  body
+    #header
+      .wrapper.clearfix
+        #logo
+          a href=root_url class="logo" sputnik
+        ul#navigation
+          li.selected
+            a href=root_url Home
+          li
+            a href=about_path  About
+          li
+            a href=posts_path  Blog
+          li
+            a href=contact_us_path  Contact Us
+    #contents
       = yield
+    #footer
+      .body
+        .wrapper.clearfix
+          #links
+            div
+              h4 Social
+              ul
+                li
+                  a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank"  Google +
+                li
+                  a href="http://freewebsitetemplates.com/go/facebook/" target="_blank"  Facebook
+                li
+                  a href="http://freewebsitetemplates.com/go/youtube/" target="_blank"  Youtube
+            div
+              h4 Heading placeholder
+              ul
+                li
+                  a href="index.html"  Link Title 1
+                li
+                  a href="index.html"  Link Title 2
+                li
+                  a href="index.html"  Link Title 3
+          p.footnote
+            | © Copyright BSU
