@@ -3,8 +3,8 @@
 # Table name: infos
 #
 #  id         :integer          not null, primary key
-#  temp       :string(255)
-#  hum        :string(255)
+#  temp       :string
+#  hum        :string
 #  created_at :datetime
 #  updated_at :datetime
 #
