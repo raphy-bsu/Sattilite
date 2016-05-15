@@ -1,0 +1,22 @@
+.page-header
+  = link_to messages_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_message_path(@message), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show message
+dl.dl-horizontal
+  dt
+    | Name:
+  dd
+    = @message.name
+  dt
+    | Email:
+  dd
+    = @message.email
+  dt
+    | Body:
+  dd
+    = @message.body

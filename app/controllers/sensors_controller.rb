@@ -1,4 +1,4 @@
-class SensorsController < ApplicationController
+class SensorsController < AdminController
   before_action :set_sensor, only: [:show, :edit, :update, :destroy]
 
   # GET /sensors

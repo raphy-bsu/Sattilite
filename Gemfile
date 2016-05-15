@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'chartkick'
+gem 'devise'
 gem "slim-rails"
 gem 'slim'
 gem 'groupdate'

@@ -1,4 +1,4 @@
-class ValuesController < ApplicationController
+class ValuesController < AdminController
   before_action :set_value, only: [:show, :edit, :update, :destroy]
 
   # GET /values
