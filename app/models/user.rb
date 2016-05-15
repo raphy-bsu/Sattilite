@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role                   :integer
 #
 # Indexes
 #
@@ -28,5 +29,17 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :email, presence: true, uniqueness: true
+
   has_many :categories
+
+  enum role: [:user, :admin]
+
+  after_initialize :set_defaults, if: :new_record?
+
+  private
+
+  def set_defaults
+    self.role ||= :user
+  end
 end
