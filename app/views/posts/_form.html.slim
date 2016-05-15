@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :title
-    = f.input :body
+    = f.input :body, input_html: { class: 'summernote' }
 
   .form-actions
     = f.button :submit
