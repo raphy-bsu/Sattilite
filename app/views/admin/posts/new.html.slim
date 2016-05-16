@@ -1,9 +1,7 @@
 .page-header
-  = link_to posts_path, class: 'btn btn-default' do 
+  = link_to admin_posts_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  h1
-    | New 
-    | post
+    |  Назад
+  h1 Новая запись в блог
 
 = render 'form'

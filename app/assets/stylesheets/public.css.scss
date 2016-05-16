@@ -26,6 +26,24 @@
 
 
 
+.devise {
+  color: white;
 
+  .text_input {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Arial";
+  }
 
+  .help-block {
+    display: block;
+  }
 
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  p {
+    padding-bottom: 0 !important;
+  }
+}

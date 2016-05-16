@@ -1,16 +1,16 @@
 .page-header
-  = link_to new_category_path, class: 'btn btn-primary' do 
+  = link_to new_admin_category_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
-    |  New Category
+    |  Новая категория
   h1
-    | Listing categories
+    | Категории
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
         th
-          | Name
+          | Название
         th
         th
         th
@@ -20,8 +20,8 @@
           td
             = category.name
           td
-            = link_to 'Show', category
+            = link_to 'Показать', admin_category_path(category)
           td
-            = link_to 'Edit', edit_category_path(category) 
+            = link_to 'Править', edit_admin_category_path(category)
           td
-            = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to 'Удалить', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }

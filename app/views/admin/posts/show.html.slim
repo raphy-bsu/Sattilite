@@ -1,10 +1,10 @@
 .page-header
-  = link_to posts_path, class: 'btn btn-default' do 
+  = link_to admin_posts_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  = link_to edit_post_path(@post), class: 'btn btn-primary' do 
+    |  Back
+  = link_to edit_admin_post_path(@post), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    |  Edit
   h1
     | Show post
 dl.dl-horizontal

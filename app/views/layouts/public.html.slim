@@ -39,11 +39,12 @@ html
           li
             a href=contact_us_path  Обратная связь
     #contents
-      = yield
+      .wrapper
+        = yield
     #footer
       .body
         .wrapper.clearfix
-          #links
+          .links
             div
               ul
                 li
@@ -58,5 +59,16 @@ html
                   a href="index.html"  Новости
                 li
                   a href="index.html"  Обратная связь
+          .links
+            ul
+              - if user_signed_in?
+                li
+                  = link_to 'Выйти', destroy_user_session_path, method: :delete
+              - else
+                li
+                  a href=new_user_session_path Вход
+              - unless user_signed_in?
+                li
+                  = link_to 'Регистрация', new_user_registration_path
           p.footnote
             | © Copyright Raphy Team

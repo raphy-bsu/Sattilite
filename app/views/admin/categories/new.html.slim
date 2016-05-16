@@ -1,9 +1,8 @@
 .page-header
-  = link_to categories_path, class: 'btn btn-default' do 
+  = link_to admin_categories_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    |  Назад
   h1
-    | New 
-    | category
+    | Новая категория
 
 = render 'form'

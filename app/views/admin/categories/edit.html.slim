@@ -1,12 +1,11 @@
 .page-header
-  = link_to categories_path, class: 'btn btn-default' do
+  = link_to admin_categories_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  = link_to @category, class: 'btn btn-primary' do
+    |  Назад
+  = link_to [:admin, @category], class: 'btn btn-primary' do
     span.glyphicon.glyphicon-info-sign
-    |  Show 
+    |  Показать
   h1
-    | Editing 
-    | category
+    | Править категорию
 
 = render 'form'

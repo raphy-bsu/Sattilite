@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root to: 'admin#index'
 
-      resources :messages
+      resources :messages, except: [:edit]
       resources :posts
 
       resources :categories do
