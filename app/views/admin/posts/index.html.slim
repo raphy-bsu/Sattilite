@@ -20,12 +20,15 @@
       - @posts.each do | post |
         tr
           td
-            = post.title
+            = post.title.try(:truncate, 80)
           td
-            = post.body.try(:html_safe)
+            = post.body.try(:truncate, 80).try(:html_safe)
           td
             = link_to 'Показать', admin_post_path(post)
           td
             = link_to 'Правка', edit_admin_post_path(post)
           td
             = link_to 'Удалить', admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены?' }
+
+
+= will_paginate @posts
