@@ -30,6 +30,7 @@ gem 'will_paginate-bootstrap'
 gem 'airbrake', '~> 5.0'
 gem 'simple_form'
 gem 'nested_scaffold'
+gem 'faker'
 
 gem "font-awesome-rails"
 
