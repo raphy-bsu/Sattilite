@@ -3,12 +3,14 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :posts, only: [:index, :show]
-  resources :messages, only: [:new]
+  scope module: 'public' do
+    resources :posts, only: [:index, :show]
+    resources :messages, only: [:new, :create]
+  end
 
   authenticate do
     namespace :admin do
-      root to: 'admin#index'
+      root to: 'posts#index'
 
       resources :messages, except: [:edit]
       resources :posts

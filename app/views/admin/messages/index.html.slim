@@ -1,7 +1,4 @@
 .page-header
-  = link_to new_message_path, class: 'btn btn-primary' do 
-    span.glyphicon.glyphicon-plus
-    |  New Message
   h1
     | Listing messages
 
@@ -17,7 +14,6 @@
           | Body
         th
         th
-        th
     tbody
       - @messages.each do | message |
         tr
@@ -28,8 +24,6 @@
           td
             = message.body
           td
-            = link_to 'Show', message
+            = link_to 'Show', admin_message_path(message)
           td
-            = link_to 'Edit', edit_message_path(message) 
-          td
-            = link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to 'Destroy', admin_message_path(message), method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,0 +1,20 @@
+#contact.wrapper.clearfix
+  .main
+    h1
+      | Свяжитесь с нами
+      = form_for(@message) do |f|
+        ul
+          li
+            = f.text_field :name, placeholder: 'Полное имя',
+                                  label: false,
+                                  required: true
+          li
+            = f.text_field :email, placeholder: 'Email',
+                                   label: false,
+                                   required: true
+          li
+            = f.text_area :body, placeholder: 'Сообщение',
+                                 label: false,
+                                 required: true
+          li
+            = f.button :submit, class: 'btn3'
