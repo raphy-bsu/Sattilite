@@ -23,7 +23,7 @@
           h4
             = p.title
           p
-            = p.body.truncate(300)
+            = p.body.truncate(300).try(:html_safe)
           a.more href=post_url(p)
             | Read more>>
 

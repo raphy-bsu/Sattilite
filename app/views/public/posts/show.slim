@@ -4,4 +4,4 @@
   span.time
     = @post.created_at.strftime("%d %b %Y")
   p
-    = @post.body
+    = @post.body.try(:html_safe)
