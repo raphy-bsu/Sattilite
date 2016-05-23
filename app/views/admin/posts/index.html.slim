@@ -31,4 +31,5 @@
             = link_to 'Удалить', admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены?' }
 
 
-= will_paginate @posts
+.text-center
+  = will_paginate @posts, renderer: BootstrapPagination::Rails
