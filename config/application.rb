@@ -20,5 +20,11 @@ module Sattilite
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.time_zone = 'Europe/Minsk'
+
+
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+    config.paths.add File.join('app', 'serializers'), glob: '*.rb', eager_load: true
+
   end
 end

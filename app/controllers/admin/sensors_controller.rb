@@ -18,6 +18,7 @@ class Admin::SensorsController < Admin::AdminController
 
   def create
     @sensor = Sensor.new(sensor_params)
+    @sensor.abbr = @sensor.name.parameterize
     @sensor.category = @category
 
     respond_to do |format|

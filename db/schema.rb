@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523122954) do
+ActiveRecord::Schema.define(version: 20160523142607) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "abbr"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160523122954) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "val_type"
+    t.string   "abbr"
   end
 
   add_index "sensors", ["category_id"], name: "index_sensors_on_category_id"

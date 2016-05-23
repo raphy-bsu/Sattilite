@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  mount Sputnik::API, at: '/'
+  mount GrapeSwaggerRails::Engine => '/docs'
 
   devise_for :users
 

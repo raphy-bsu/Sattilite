@@ -17,6 +17,7 @@ class Admin::CategoriesController < Admin::AdminController
 
   def create
     @category = Category.new(category_params)
+    @category.abbr = @category.name.parameterize
     @category.user = current_user
 
     respond_to do |format|

@@ -20,4 +20,6 @@ h1
           td
             = link_to sensor.name, admin_category_sensor_values_path(@category, sensor)
           td
+            = link_to sensor.abbr
+          td
             = link_to 'Destroy', admin_category_sensor_path(@category, sensor), method: :delete, data: { confirm: 'Are you sure?' }

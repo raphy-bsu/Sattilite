@@ -20,6 +20,8 @@
           td
             = link_to category.name, admin_category_sensors_path(category)
           td
+            = category.abbr
+          td
             = link_to 'Править', edit_admin_category_path(category)
           td
             = link_to 'Удалить', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }

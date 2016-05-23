@@ -33,6 +33,13 @@ gem 'nested_scaffold'
 gem 'faker'
 gem 'enum_help'
 
+gem 'grape', '~> 0.14.0'
+gem 'grape-active_model_serializers'
+gem 'rack-cors', require: 'rack/cors'
+gem 'grape-swagger-rails', '0.2.0'
+gem 'grape-swagger', '0.10.4'
+gem 'grape-middleware-lograge'
+
 gem "font-awesome-rails"
 
 gem 'sweetalert-rails', '0.5.0'
