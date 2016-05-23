@@ -7,6 +7,7 @@
 //= require metisMenu/metisMenu.js
 //= require sweet-alert
 //= require sweet-alert-confirm
+//= require chartkick
 
 
 $(document).ready(function() {

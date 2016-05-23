@@ -1,9 +1,10 @@
 .page-header
-  = link_to new_sensor_path, class: 'btn btn-primary' do 
+  = link_to new_admin_category_sensor_path, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
     |  New Sensor
-  h1
-    | Listing sensors
+
+h1
+  | Listing sensors
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
@@ -12,20 +13,11 @@
         th
           | Name
         th
-          | Category
-        th
-        th
         th
     tbody
       - @sensors.each do | sensor |
         tr
           td
-            = sensor.name
+            = link_to sensor.name, admin_category_sensor_values_path(@category, sensor)
           td
-            = sensor.category
-          td
-            = link_to 'Show', sensor
-          td
-            = link_to 'Edit', edit_sensor_path(sensor) 
-          td
-            = link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to 'Destroy', admin_category_sensor_path(@category, sensor), method: :delete, data: { confirm: 'Are you sure?' }

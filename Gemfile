@@ -31,6 +31,7 @@ gem 'airbrake', '~> 5.0'
 gem 'simple_form'
 gem 'nested_scaffold'
 gem 'faker'
+gem 'enum_help'
 
 gem "font-awesome-rails"
 

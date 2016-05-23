@@ -1,10 +1,10 @@
 .page-header
-  = link_to sensors_path, class: 'btn btn-default' do 
+  = link_to admin_category_sensors_path(@category), class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  = link_to edit_sensor_path(@sensor), class: 'btn btn-primary' do 
+    |  Back
+  = link_to edit_admin_category_sensor_path(@category, @sensor), class: 'btn btn-primary' do
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    |  Edit
   h1
     | Show sensor
 dl.dl-horizontal

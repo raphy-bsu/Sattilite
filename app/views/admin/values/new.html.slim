@@ -1,9 +1,9 @@
 .page-header
-  = link_to values_path, class: 'btn btn-default' do 
+  = link_to admin_category_sensor_values_path(@category, @sensor), class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    |  Back
   h1
-    | New 
+    | New
     | value
 
 = render 'form'

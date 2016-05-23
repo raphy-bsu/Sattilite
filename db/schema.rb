@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515211024) do
+ActiveRecord::Schema.define(version: 20160523122954) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160515211024) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "val_type"
   end
 
   add_index "sensors", ["category_id"], name: "index_sensors_on_category_id"
@@ -64,7 +65,6 @@ ActiveRecord::Schema.define(version: 20160515211024) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "values", force: :cascade do |t|
-    t.integer  "type"
     t.float    "val_float"
     t.integer  "val_int"
     t.text     "val_str"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20160515211024) do
     t.integer  "sensor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "val_type"
+    t.integer  "time"
   end
 
   add_index "values", ["sensor_id"], name: "index_values_on_sensor_id"

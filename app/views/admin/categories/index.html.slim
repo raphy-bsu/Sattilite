@@ -18,9 +18,7 @@
       - @categories.each do | category |
         tr
           td
-            = category.name
-          td
-            = link_to 'Показать', admin_category_path(category)
+            = link_to category.name, admin_category_sensors_path(category)
           td
             = link_to 'Править', edit_admin_category_path(category)
           td

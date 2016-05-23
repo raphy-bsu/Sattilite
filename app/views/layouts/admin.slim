@@ -4,6 +4,7 @@ html
     title = t('views.layouts.admin.title')
     = stylesheet_link_tag    'admin/admin'
     = javascript_include_tag 'admin/admin'
+    = javascript_include_tag "https://www.google.com/jsapi"
     = csrf_meta_tags
 
   body
@@ -40,7 +41,7 @@ html
                   | Категории
               li
                 a href=admin_messages_path
-                  i.fa.fa-file.fa-fw
+                  i.fa.fa-envelope-o.fa-fw
                   | Сообщения
 
       #page-wrapper style=('min-height: 183px;')

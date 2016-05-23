@@ -1,47 +1,24 @@
 .page-header
-  = link_to new_value_path, class: 'btn btn-primary' do 
+  = link_to new_admin_category_sensor_value_path(@category, @sensor),
+          class: 'btn btn-primary' do
     span.glyphicon.glyphicon-plus
     |  New Value
   h1
     | Listing values
+
+= column_chart @values.map{|p| [Time.at(p.time).strftime("%T %F"), p.get_value]}, xtitle: "Time", ytitle: @sensor.name
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
         th
-          | Type
-        th
-          | Val float
-        th
-          | Val int
-        th
-          | Val str
-        th
-          | Val bool
-        th
-          | Sensor
-        th
-        th
+          | Value
         th
     tbody
       - @values.each do | value |
         tr
           td
-            = value.type
+            = value.get_value
           td
-            = value.val_float
-          td
-            = value.val_int
-          td
-            = value.val_str
-          td
-            = value.val_bool
-          td
-            = value.sensor
-          td
-            = link_to 'Show', value
-          td
-            = link_to 'Edit', edit_value_path(value) 
-          td
-            = link_to 'Destroy', value, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to 'Destroy', admin_category_sensor_value_path(@category, @sensor, value), method: :delete, data: { confirm: 'Are you sure?' }

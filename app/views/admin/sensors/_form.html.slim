@@ -1,9 +1,11 @@
-= simple_form_for(@sensor) do |f|
+= simple_form_for([:admin, @category, @sensor]) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
-    = f.association :category
+
+  .form-inputs
+    = f.input :val_type
 
   .form-actions
     = f.button :submit

@@ -108,6 +108,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    enum_help (0.0.15)
     erd (0.3.3)
       nokogiri
       rails-erd (>= 0.4.5)
@@ -315,6 +316,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   colorize
   devise
+  enum_help
   erd
   faker
   font-awesome-rails

@@ -2,7 +2,7 @@ class Admin::PostsController < Admin::AdminController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.paginate(:page => params[:page])
+    @posts = Post.order('created_at DESC').paginate(:page => params[:page])
   end
 
   def show
