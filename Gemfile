@@ -59,6 +59,8 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
+
+  gem 'binding_of_caller'
 end
 
 # Use rest-client for generating queries
