@@ -32,7 +32,7 @@ class Sensor < ActiveRecord::Base
         value = value.to_f
       when 'integer'
         key = :val_int
-        value = valut.to_i
+        value = value.to_i
       when 'string'
         key = :val_str
         value = value.to_s
