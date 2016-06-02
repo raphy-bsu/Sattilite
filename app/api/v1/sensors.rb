@@ -15,8 +15,9 @@ module V1
         password = 'abc'
         error!('401 Unauthorized', 401) unless params[:password] == password
         category = Category.where(abbr: params[:category_name]).first
-        error!('404 Not found', 404) unless category
+        error!('No such category: '+params[:category_name], 404) unless category
         sensor = category.sensors.where(abbr: params[:sensor_name]).first
+        error!('No such sensor: '+params[:sensor_name], 404) unless sensor
         sensor.insert_value(params[:value], params[:time])
       end
 
