@@ -32,6 +32,6 @@ ol.breadcrumb style=("margin-top: 10px;")
       - @values.each do | value |
         tr
           td
-            = value.time
+            = Time.at(value.time).to_datetime
           td
             = value.get_value
