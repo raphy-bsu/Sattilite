@@ -4,7 +4,7 @@ class Admin::ValuesController < Admin::AdminController
   before_action :set_sensor
 
   def index
-    @values = @category.sensor.values
+    @values = @sensor.values
   end
 
   def show
