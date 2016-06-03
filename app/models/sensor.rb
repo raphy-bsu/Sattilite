@@ -9,6 +9,7 @@
 #  updated_at  :datetime         not null
 #  val_type    :integer
 #  abbr        :string
+#  measure     :string
 #
 # Indexes
 #
