@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 
   has_many :categories
 
-  enum role: [:user, :admin]
+  enum role: [:user, :admin, :developer]
 
   after_initialize :set_defaults, if: :new_record?
 
