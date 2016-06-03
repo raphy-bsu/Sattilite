@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   end
 
   authenticate do
+    namespace :developer do
+      root to: 'dashboard#index'
+    end
+
     namespace :admin do
       root to: 'posts#index'
 

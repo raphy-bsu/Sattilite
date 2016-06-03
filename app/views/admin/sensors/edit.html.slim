@@ -1,12 +1,8 @@
 .page-header
-  = link_to sensors_path, class: 'btn btn-default' do
+  = link_to admin_category_sensors_path(@category), class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
-  = link_to @sensor, class: 'btn btn-primary' do
-    span.glyphicon.glyphicon-info-sign
-    |  Show 
+    |  Back
   h1
-    | Editing 
-    | sensor
+    | Editing sensor
 
 = render 'form'

@@ -59,6 +59,6 @@ class Admin::SensorsController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:name, :abbr, :category_id, :val_type)
+      params.require(:sensor).permit(:name, :abbr, :category_id, :val_type, :measure)
     end
 end
