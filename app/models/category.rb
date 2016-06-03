@@ -13,4 +13,6 @@
 class Category < ActiveRecord::Base
   belongs_to :user
   has_many :sensors, dependent: :destroy
+
+  validates :name, :abbr, presence: true, uniqueness: true
 end

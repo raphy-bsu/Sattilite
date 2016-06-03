@@ -1,25 +1,29 @@
+ol.breadcrumb style=("margin-top: 10px;")
+  li = @category.name
+
 .page-header
-  = link_to new_admin_category_sensor_path, class: 'btn btn-primary' do
+  = link_to new_admin_category_sensor_path, class: 'btn btn-primary pull-right' do
     span.glyphicon.glyphicon-plus
-    |  New Sensor
+    = t('.new')
 
-h1
-  | Listing sensors
+  h1 = @category.name
 
-.table-responsive
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th
-          | Name
-        th
-        th
-    tbody
-      - @sensors.each do | sensor |
+- if @category.sensors.size > 0
+  .table-responsive
+    table.table.table-striped.table-bordered.table-hover
+      thead
         tr
-          td
-            = link_to sensor.name, admin_category_sensor_values_path(@category, sensor)
-          td
-            = link_to sensor.abbr
-          td
-            = link_to 'Destroy', admin_category_sensor_path(@category, sensor), method: :delete, data: { confirm: 'Are you sure?' }
+          th = t('views.admin.sensors.actions.name')
+          th ID
+          th
+      tbody
+        - @sensors.each do | sensor |
+          tr
+            td
+              = link_to sensor.name, admin_category_sensor_values_path(@category, sensor)
+            td
+              = link_to sensor.abbr
+            td
+              = link_to t('actions.delete'), admin_category_sensor_path(@category, sensor), method: :delete, data: { confirm: 'Are you sure?' }
+- else
+  div Please, add sensors

@@ -1,0 +1,18 @@
+.modal.fade.bs-example-modal-sm aria-labelledby="mySmallModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        h4#myModalLabel.modal-title = title
+  = simple_form_for([:admin, resource]) do |f|
+  .modal-body
+    - fields.each do |field, params|
+      = f.input field, required: params[:required], html5: true
+  .modal-footer
+    button.btn.btn-default data-dismiss="modal" type="button"
+      i.fa.fa-undo.fa-fw
+      = t('actions.back')
+    button.btn.btn-primary type="submit"
+      i.fa.fa-check.fa-fw
+      = t('actions.save')

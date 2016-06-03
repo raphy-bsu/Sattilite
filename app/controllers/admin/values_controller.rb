@@ -47,6 +47,13 @@ class Admin::ValuesController < Admin::AdminController
     end
   end
 
+  def destroy_all
+    @sensor.values.destroy_all
+    respond_to do |format|
+      format.html { redirect_to admin_category_sensor_values_path(@category, @sensor), notice: 'Value was successfully destroyed.' }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_value

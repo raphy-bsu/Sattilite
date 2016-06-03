@@ -1,10 +1,24 @@
+ol.breadcrumb style=("margin-top: 10px;")
+  li
+    a href=admin_category_sensors_path(@category)  = @category.name
+  li
+    a href=admin_category_sensor_values_path(@category, @sensor)  = @sensor.name
+
 .page-header
-  = link_to new_admin_category_sensor_value_path(@category, @sensor),
-          class: 'btn btn-primary' do
-    span.glyphicon.glyphicon-plus
-    |  New Value
+  = link_to destroy_all_admin_category_sensor_values_path(@category, @sensor),
+            method: :delete,
+            data: { confirm: 'Are you sure?' },
+            class: 'btn btn-danger pull-right' do
+    i.fa.fa-fw.fa-trash
+    | Clear all
   h1
-    | Listing values
+    = @category.name
+    span>
+      | :
+    i
+      = @sensor.name
+      |(t)
+
 
 = column_chart @values.map{|p| [Time.at(p.time).strftime("%T %F"), p.get_value]}, xtitle: "Time", ytitle: @sensor.name
 
@@ -12,13 +26,12 @@
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
-        th
-          | Value
-        th
+        th Time
+        th Value
     tbody
       - @values.each do | value |
         tr
           td
-            = value.get_value
+            = value.time
           td
-            = link_to 'Destroy', admin_category_sensor_value_path(@category, @sensor, value), method: :delete, data: { confirm: 'Are you sure?' }
+            = value.get_value

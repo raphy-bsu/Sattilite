@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       resources :categories do
         resources :sensors do
           resources :values do
-            post :clean, on: :collection
+            delete :destroy_all, on: :collection
           end
         end
       end

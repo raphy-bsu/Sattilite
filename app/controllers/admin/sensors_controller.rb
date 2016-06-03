@@ -18,7 +18,7 @@ class Admin::SensorsController < Admin::AdminController
 
   def create
     @sensor = Sensor.new(sensor_params)
-    @sensor.abbr = @sensor.name.parameterize
+    @sensor.abbr = @sensor.name.parameterize if @sensor.abbr.empty?
     @sensor.category = @category
 
     respond_to do |format|
@@ -59,6 +59,6 @@ class Admin::SensorsController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:name, :category_id, :val_type)
+      params.require(:sensor).permit(:name, :abbr, :category_id, :val_type)
     end
 end

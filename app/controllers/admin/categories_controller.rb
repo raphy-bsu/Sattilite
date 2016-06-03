@@ -17,12 +17,12 @@ class Admin::CategoriesController < Admin::AdminController
 
   def create
     @category = Category.new(category_params)
-    @category.abbr = @category.name.parameterize
+    @category.abbr = @category.name.parameterize if @category.abbr.empty?
     @category.user = current_user
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to [:admin, @category], notice: 'Category was successfully created.' }
+        format.html { redirect_to admin_categories_path, notice: 'Category was successfully created.' }
       else
         format.html { render :new }
       end
@@ -32,7 +32,7 @@ class Admin::CategoriesController < Admin::AdminController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to [:admin, @category], notice: 'Category was successfully updated.' }
+        format.html { redirect_to admin_categories_path, notice: 'Category was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -54,6 +54,6 @@ class Admin::CategoriesController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, :abbr)
     end
 end
