@@ -1,32 +1,47 @@
+---
 en:
   actions:
-    edit: Edit
-    new: New
+    back: Back
+    clear_all: Clear all
     delete: Delete
-    show: Show
-    logout: Logout
+    edit: Edit
     login: Log in
+    logout: Logout
+    new: New
+    save: Save
+    show: Show
+    toggle: Toggle
+  admin:
+    posts:
+      index:
+        title: Title
+    sensors:
+      index:
+        new: New
   views:
+    admin:
+      nav:
+        blog: Blog
+        categories: Sensor categories
+        dashboard: Dashboard
+        messages: Messages
+      posts:
+        fields:
+          body: Content
+          title: Title
+        index:
+          title: Posts
+      sensors:
+        actions:
+          name: Name
+        index:
+          new: New sensor
+          title: Sensors
+      values:
+        index:
+          no_values: No values loaded yet, please, wait for telemetry from satellite
     layouts:
       admin:
         title: Admin Dashboard
       application:
         title: Sputnik BSU
-    admin:
-      nav:
-        blog: Blog
-        categories: Sensor categories
-        messages: Messages
-        dashboard: Dashboard
-      sensors:
-        index:
-          title: Sensors
-          new: New sensor
-        actions:
-          name: Name
-      posts:
-        index:
-          title: Posts
-        fields:
-          title: Title
-          body: Content

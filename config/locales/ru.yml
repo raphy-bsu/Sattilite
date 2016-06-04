@@ -1,14 +1,47 @@
+---
 ru:
+  actions:
+    back: Назад
+    clear_all: Очистить все
+    delete: Удалить
+    edit: Править
+    login: Войти
+    logout: Выйти
+    new: Добавить
+    save: Сохранить
+    show: Показать
+    toggle: Переключить
+  admin:
+    posts:
+      index:
+        title: Заголовок
+    sensors:
+      index:
+        new: Добавить датчик
   views:
-    layouts:
-      admin:
-        title: Admin Dashboard
-      application:
-        title: Sputnik BSU
     admin:
-      sensors:
+      nav:
+        blog: Блог
+        categories: Категории датчиков
+        dashboard: Панель управления
+        messages: Сообщения
+      posts:
+        fields:
+          body: Содержание
+          title: Заголовок
         index:
-          title: Датчики
-          new: Добавить датчик
+          title: Блог
+      sensors:
         actions:
           name: Название
+        index:
+          new: Добавить датчик
+          title: Датчики
+      values:
+        index:
+          no_values: Данные телеметрии еще не загружены
+    layouts:
+      admin:
+        title: Панель администратора
+      application:
+        title: Спутник БГУ
