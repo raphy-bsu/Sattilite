@@ -47,3 +47,28 @@
     padding-bottom: 0 !important;
   }
 }
+
+#flash {
+  .alert {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+
+    &:first-child {
+      padding-top: 30px;
+    }
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+
+  .close {
+    background: transparent;
+    border: none;
+    float: right;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+  }
+
+}

@@ -15,6 +15,7 @@ gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'chartkick'
 gem 'devise'
+gem 'devise-i18n'
 gem "slim-rails"
 gem 'slim'
 gem 'groupdate'

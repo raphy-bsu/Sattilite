@@ -13,16 +13,6 @@ html
   = javascript_include_tag 'public'
   = javascript_include_tag "https://www.google.com/jsapi", "chartkick"
   = csrf_meta_tags
-  body
-    .container
-      - flash.each do |name, msg|
-        = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
-          button.close type="button" data-dismiss="alert"
-            span aria-hidden="true"
-              | &times;
-            span.sr-only
-              | Close
-          = msg
 
   body
     #header
@@ -38,6 +28,15 @@ html
             a href=posts_path  Новости
           li
             a href=contact_us_path  Обратная связь
+
+    #flash
+      - flash.each do |name, msg|
+        = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
+          button.close type="button" data-dismiss="alert"
+            span aria-hidden="true"
+              | &times;
+          = msg
+
     #contents
       .wrapper
         = yield
