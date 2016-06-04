@@ -1,18 +1,15 @@
 .page-header
   = link_to new_admin_post_path, class: 'btn btn-primary pull-right' do
     span.glyphicon.glyphicon-plus
-    | Новая запись
-  h1
-    | Список записей в блоге
+    = t('actions.new')
+  h1 = t('.title')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
-        th
-          | Title
-        th
-          | Body
+        th = t('views.admin.posts.fields.title')
+        th = t('views.admin.posts.fields.body')
         th
         th
         th
@@ -24,11 +21,11 @@
           td
             = post.body.try(:truncate, 80).try(:html_safe)
           td
-            = link_to 'Показать', admin_post_path(post)
+            = link_to t('actions.show'), admin_post_path(post)
           td
-            = link_to 'Правка', edit_admin_post_path(post)
+            = link_to t('actions.edit'), edit_admin_post_path(post)
           td
-            = link_to 'Удалить', admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены?' }
+            = link_to t('actions.delete'), admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены?' }
 
 
 .text-center

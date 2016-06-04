@@ -1,0 +1,14 @@
+ru:
+  views:
+    layouts:
+      admin:
+        title: Admin Dashboard
+      application:
+        title: Sputnik BSU
+    admin:
+      sensors:
+        index:
+          title: Датчики
+          new: Добавить датчик
+        actions:
+          name: Название

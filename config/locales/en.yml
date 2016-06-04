@@ -1,4 +1,10 @@
 en:
+  actions:
+    edit: Edit
+    new: New
+    delete: Delete
+    show: Show
+    logout: Logout
   views:
     layouts:
       admin:
@@ -6,10 +12,20 @@ en:
       application:
         title: Sputnik BSU
     admin:
+      nav:
+        blog: Blog
+        categories: Sensor categories
+        messages: Messages
+        dashboard: Dashboard
       sensors:
         index:
           title: Sensors
           new: New sensor
         actions:
           name: Name
-
+      posts:
+        index:
+          title: Posts
+        fields:
+          title: Title
+          body: Content
