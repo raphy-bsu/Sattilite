@@ -4,7 +4,7 @@ class SputnikAPI:
   # Example: server.set_password('abc')
   def set_password(self, password):
     self.password = password
-  
+
   # Example: server.set_host('sputnik-bsu.herokuapp.com')
   def set_host(self, url):
     self.url = 'http://'+url+'/api/v1/sensors'
@@ -21,3 +21,5 @@ server = SputnikAPI()
 server.set_password('abc')
 server.set_host('localhost:3000')
 server.push('payloads', 'humidity', 21, 10)
+server.push('payloads', 'humidity', 22, 11)
+server.push('payloads', 'humidity', 23, 12)
