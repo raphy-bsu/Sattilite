@@ -1,7 +1,10 @@
 .page-header
-  = link_to new_admin_category_path, class: 'btn btn-primary pull-right' do
-    span.glyphicon.glyphicon-plus
-    |  Добавить категорию
+  span.btn-group.pull-right
+    = link_to new_admin_category_path, class: 'btn btn-default', title: 'Помощь' do
+      span.glyphicon.glyphicon-plus
+      |  Добавить категорию
+    = link_to '#', class: 'btn btn-success hint--bottom', :'data-hint' => 'Помощь'  do
+      i.fa.fa-fw.fa-question-circle
   h1
     | Категории
 
@@ -12,8 +15,7 @@
         th
           | Название
         th
-          | Уникальная аббревиатура
-        th
+          | ID
         th
     tbody
       - @categories.each do | category |
@@ -23,6 +25,7 @@
           td
             = category.abbr
           td
-            = link_to 'Править', edit_admin_category_path(category)
-          td
-            = link_to 'Удалить', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }
+            span<>
+              = link_to 'Править', edit_admin_category_path(category)
+            span<>
+              = link_to 'Удалить', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }

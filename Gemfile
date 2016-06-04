@@ -83,4 +83,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-underscore'
   gem 'rails-assets-summernote'
   gem 'rails-assets-startbootstrap-sb-admin-2', '~> 1.0.8'
+  gem 'rails-assets-hint.css'
 end
