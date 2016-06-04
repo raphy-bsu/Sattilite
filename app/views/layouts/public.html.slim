@@ -62,7 +62,7 @@ html
             ul
               - if user_signed_in?
                 li
-                  = link_to t('actions.logout'), destroy_user_session_path, method: :delete
+                  = link_to t('actions.logout'), destroy_user_session_path
               - else
                 li
                   a href=new_user_session_path = t('actions.login')
