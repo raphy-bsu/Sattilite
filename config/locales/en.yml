@@ -1,4 +1,8 @@
 en:
+  will_paginate:
+    page_gap: ...
+    next_label: Next
+    previous_label: Previous
   actions:
     edit: Edit
     new: New
