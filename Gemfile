@@ -16,6 +16,7 @@ gem 'bootstrap-generators', '~> 3.3.4'
 gem 'chartkick'
 gem 'devise'
 gem 'devise-i18n'
+gem 'will-paginate-i18n'
 gem "slim-rails"
 gem 'slim'
 gem 'groupdate'
@@ -63,6 +64,7 @@ gem 'unicorn'
 # Use Capistrano for deployment
 group :development do
   gem 'sqlite3'
+  gem 'i18n-tasks'
 
   gem 'better_errors'
   gem 'capistrano-rails'

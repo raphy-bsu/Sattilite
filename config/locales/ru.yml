@@ -1,8 +1,4 @@
 ru:
-  will_paginate:
-    page_gap: ...
-    next_label: Поздние
-    previous_label: Ранние
   views:
     layouts:
       admin:
