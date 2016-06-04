@@ -5,6 +5,7 @@ en:
     delete: Delete
     show: Show
     logout: Logout
+    login: Log in
   views:
     layouts:
       admin:
