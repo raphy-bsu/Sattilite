@@ -41,7 +41,7 @@ img {
 }
 /*------------------------------ HEADER ------------------------------*/
 .btn1, .btn2, .btn3, input.rounded {
-	background: image-url('interface.png') no-repeat;
+    background: image-url('interface.png') no-repeat;
 }
 .btn1, .btn2, .btn3 {
 	color: #fdfdfd;
@@ -52,6 +52,8 @@ img {
 	text-decoration: none;
 	text-shadow: -3px 0 3px #053131;
 	text-transform: uppercase;
+    border: none;
+    cursor: pointer;
 }
 .btn1 {
 	background-position: 0 0;
