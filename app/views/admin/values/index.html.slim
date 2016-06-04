@@ -22,7 +22,7 @@ ol.breadcrumb style=("margin-top: 10px;")
 
 = column_chart @values.map{|p| [Time.at(p.time).strftime("%T %F"), p.get_value]},
         xtitle: "Time, c",
-        ytitle: @sensor.name+", "+@sensor.measure
+        ytitle: @sensor.name+", "+@sensor.measure.to_s
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
