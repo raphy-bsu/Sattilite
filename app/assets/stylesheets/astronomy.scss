@@ -41,48 +41,56 @@ img {
 }
 /*------------------------------ HEADER ------------------------------*/
 .btn1, .btn2, .btn3, input.rounded {
-    background: image-url('interface.png') no-repeat;
+  background: image-url('interface.png') no-repeat;
 }
+
 .btn1, .btn2, .btn3 {
-	color: #fdfdfd;
-	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	text-shadow: -3px 0 3px #053131;
-	text-transform: uppercase;
-    border: none;
-    cursor: pointer;
+  color: #fdfdfd;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: -3px 0 3px #053131;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
+
 .btn1 {
-	background-position: 0 0;
-	height: 34px;
-	line-height: 34px;
-	width: 202px;
-	padding: 0 3px 9px;
+  background-position: 0 0;
+  height: 34px;
+  line-height: 34px;
+  width: 202px;
+  padding: 0 3px 9px;
 }
+
 .btn2 {
-	background-position: 0 -53px;
-	height: 37px;
-	line-height: 37px;
-	width: 216px;
-	padding: 0 3px 8px;
+  background-position: 0 -53px;
+  height: 37px;
+  line-height: 37px;
+  width: 216px;
+  padding: 0 3px 8px;
 }
+
 .btn3 {
-	background-position: 0 -108px;
-	font: 22px/49px Georgia, "Times New Roman", Times, serif;
-	height: 49px;
-	width: 222px;
+  background-position: 0 -108px;
+  font: 22px/49px Georgia, "Times New Roman", Times, serif;
+  height: 49px;
+  width: 222px;
 }
+
 .btn1:hover {
-	background-position: -222px 0;
+  background-position: -222px 0;
 }
+
 .btn2:hover {
-	background-position: -232px -53px;
+  background-position: -232px -53px;
 }
+
 .btn3:hover {
-	background-position: -232px -108px;
+  background-position: -232px -108px;
 }
 /*------------------------------ HEADER ------------------------------*/
 #header {
