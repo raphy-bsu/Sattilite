@@ -4,7 +4,7 @@ class Admin::ValuesController < Admin::AdminController
   before_action :set_sensor
 
   def index
-    @values = @sensor.values
+    @values = @sensor.values.paginate(:page => params[:page], :per_page => 30)
   end
 
   def show

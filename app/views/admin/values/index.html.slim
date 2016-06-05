@@ -19,6 +19,9 @@ ol.breadcrumb style=("margin-top: 10px;")
           xtitle: "Time, c",
           ytitle: @sensor.name+", "+@sensor.measure.to_s
 
+  .text-center
+    = will_paginate @values, renderer: BootstrapPagination::Rails
+
   .table-responsive
     table.table.table-striped.table-bordered.table-hover
       thead
