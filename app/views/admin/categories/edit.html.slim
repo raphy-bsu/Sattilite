@@ -1,8 +1,8 @@
 .page-header
-  = link_to admin_categories_path, class: 'btn btn-default' do
-    span.glyphicon.glyphicon-list-alt
-    |  Назад
-  h1
-    | Править категорию
+  span.pull-right.btn-group
+    = link_to admin_categories_path, class: 'btn btn-default' do
+      i.fa.fa-fw.fa-arrow-left
+      = t('actions.back')
+  h1 = t('views.admin.categories.edit.title')
 
 = render 'form'

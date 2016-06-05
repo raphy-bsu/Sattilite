@@ -1,8 +1,5 @@
 ---
 en:
-  common:
-    help: Help
-    are_you_sure: Are you sure?
   actions:
     back: Back
     clear_all: Clear all
@@ -21,11 +18,16 @@ en:
     sensors:
       index:
         new: New
+  common:
+    are_you_sure: Are you sure?
+    help: Help
   views:
     admin:
       categories:
         actions:
           new: New
+        edit:
+          title: Edit sensor category
         fields:
           abbr: ID
           title: Title

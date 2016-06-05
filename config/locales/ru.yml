@@ -26,6 +26,8 @@ ru:
       categories:
         actions:
           new: "Добавить"
+        edit:
+          title: Правка категории
         fields:
           abbr: ID
           title: "Название"
