@@ -30,6 +30,7 @@ ru:
           title: "Правка категории"
         fields:
           abbr: ID
+          sensors_count: Количество датчиков
           title: "Название"
         index:
           no_categories: "Категории отсутствуют, добавьте категорию"

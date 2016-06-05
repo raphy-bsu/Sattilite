@@ -30,6 +30,7 @@ en:
           title: Edit sensor category
         fields:
           abbr: ID
+          sensors_count: Sensors count
           title: Title
         index:
           no_categories: No sensor categories, add new category
@@ -61,7 +62,7 @@ en:
         fields:
           abbr: ID
           measure: Units
-          values_count: Количество пакетов
+          values_count: "Количество пакетов"
         index:
           new: New sensor
           no_sensors: No sensors yet, please add sensors for this category.

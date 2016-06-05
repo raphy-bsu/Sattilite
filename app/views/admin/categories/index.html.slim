@@ -15,6 +15,7 @@
         tr
           th = t('views.admin.categories.fields.title')
           th = t('views.admin.categories.fields.abbr')
+          th = t('views.admin.categories.fields.sensors_count')
           th
       tbody
         - @categories.each do | category |
@@ -23,6 +24,8 @@
               = link_to category.name, admin_category_sensors_path(category)
             td
               = category.abbr
+            td
+              = category.sensors.count
             td
               span<>
                 = link_to t('actions.edit'), edit_admin_category_path(category)
