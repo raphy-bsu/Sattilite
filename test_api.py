@@ -20,6 +20,5 @@ class SputnikAPI:
 server = SputnikAPI()
 server.set_password('abc')
 server.set_host('localhost:3000')
-server.push('payloads', 'humidity', 21, 10)
-server.push('payloads', 'humidity', 22, 11)
-server.push('payloads', 'humidity', 23, 12)
+for i in range(100):
+  server.push('payloads', 'humidity', i, i)
