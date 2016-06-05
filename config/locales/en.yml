@@ -2,6 +2,7 @@
 en:
   common:
     help: Help
+    are_you_sure: Are you sure?
   actions:
     back: Back
     clear_all: Clear all

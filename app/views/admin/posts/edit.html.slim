@@ -1,12 +1,13 @@
 .page-header
-  = link_to admin_posts_path, class: 'btn btn-default' do
-    span.glyphicon.glyphicon-list-alt
-    |  Back
-  = link_to [:admin, @post], class: 'btn btn-primary' do
-    span.glyphicon.glyphicon-info-sign
-    |  Show
+  span.pull-right.btn-group
+    = link_to admin_posts_path, class: 'btn btn-default' do
+      i.fa.fa-fw.fa-arrow-left
+      = t('actions.back')
+    = link_to [:admin, @post], class: 'btn btn-primary' do
+      i.fa.fa-fw.fa-eye
+      = t('actions.show')
+
   h1
-    | Editing
-    | post
+    | Editing post
 
 = render 'form'

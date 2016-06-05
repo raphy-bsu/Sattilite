@@ -1,18 +1,11 @@
 .page-header
-  = link_to admin_posts_path, class: 'btn btn-default' do
-    span.glyphicon.glyphicon-list-alt
-    |  Back
-  = link_to edit_admin_post_path(@post), class: 'btn btn-primary' do
-    span.glyphicon.glyphicon-pencil
-    |  Edit
-  h1
-    | Show post
-dl.dl-horizontal
-  dt
-    | Title:
-  dd
-    = @post.title
-  dt
-    | Body:
-  dd
-    = @post.body.html_safe
+  span.pull-right.btn-group
+    = link_to admin_posts_path, class: 'btn btn-default' do
+      i.fa.fa-fw.fa-arrow-left
+      = t('actions.back')
+    = link_to edit_admin_post_path(@post), class: 'btn btn-primary' do
+      i.fa.fa-fw.fa-pencil
+      = t('actions.edit')
+  h1 = @post.title
+div
+  = @post.body.html_safe

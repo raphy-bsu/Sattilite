@@ -19,7 +19,8 @@ ru:
       index:
         new: "Добавить датчик"
   common:
-    help: Помощь
+    are_you_sure: "Вы уверены?"
+    help: "Помощь"
   views:
     admin:
       categories:
