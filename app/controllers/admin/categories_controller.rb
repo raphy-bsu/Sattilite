@@ -2,7 +2,7 @@ class Admin::CategoriesController < Admin::AdminController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @categories = current_user.categories
+    @categories = Category.all
   end
 
   def show
@@ -18,7 +18,6 @@ class Admin::CategoriesController < Admin::AdminController
   def create
     @category = Category.new(category_params)
     @category.abbr = @category.name.parameterize if @category.abbr.empty?
-    @category.user = current_user
 
     respond_to do |format|
       if @category.save
