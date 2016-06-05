@@ -1,33 +1,32 @@
 .page-header
-  h1
-    | Список сообщений
+  h1 = t('views.admin.messages.index.title')
 
-.table-responsive
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th
-          | Date
-        th
-          | Name
-        th
-          | Email
-        th
-          | Body
-        th
-        th
-    tbody
-      - @messages.each do | message |
+- unless @messages.size.zero?
+  .table-responsive
+    table.table.table-striped.table-bordered.table-hover
+      thead
         tr
-          td
-            = message.created_at.strftime("%F %T")
-          td
-            = message.name
-          td
-            = message.email
-          td
-            = message.body
-          td
-            = link_to 'Show', admin_message_path(message)
-          td
-            = link_to 'Destroy', admin_message_path(message), method: :delete, data: { confirm: 'Are you sure?' }
+          th = t('views.admin.messages.fields.date')
+          th = t('views.admin.messages.fields.name')
+          th = t('views.admin.messages.fields.email')
+          th = t('views.admin.messages.fields.body')
+          th
+          th
+      tbody
+        - @messages.each do | message |
+          tr
+            td
+              = message.created_at.strftime("%F %T")
+            td
+              = message.name
+            td
+              = message.email
+            td
+              = message.body
+            td
+              = link_to t('actions.show'), admin_message_path(message)
+            td
+              = link_to t('actions.delete'), admin_message_path(message), method: :delete, data: { confirm: 'Are you sure?' }
+- else
+  div = t('views.admin.messages.index.no_messages')
+

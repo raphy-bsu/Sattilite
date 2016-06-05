@@ -1,31 +1,32 @@
 .page-header
   span.btn-group.pull-right
-    = link_to new_admin_category_path, class: 'btn btn-default', title: 'Помощь' do
+    = link_to new_admin_category_path, class: 'btn btn-default', title: t('common.help') do
       span.glyphicon.glyphicon-plus
-      |  Добавить категорию
-    = link_to '#', class: 'btn btn-success hint--bottom', :'data-hint' => 'Помощь'  do
+      = t('views.admin.categories.actions.new')
+    = link_to '#', class: 'btn btn-success hint--bottom', :'data-hint' => t('common.help') do
       i.fa.fa-fw.fa-question-circle
   h1
-    | Категории
+    = t('views.admin.categories.index.title')
 
-.table-responsive
-  table.table.table-striped.table-bordered.table-hover
-    thead
-      tr
-        th
-          | Название
-        th
-          | ID
-        th
-    tbody
-      - @categories.each do | category |
+- unless @categories.empty?
+  .table-responsive
+    table.table.table-striped.table-bordered.table-hover
+      thead
         tr
-          td
-            = link_to category.name, admin_category_sensors_path(category)
-          td
-            = category.abbr
-          td
-            span<>
-              = link_to 'Править', edit_admin_category_path(category)
-            span<>
-              = link_to 'Удалить', admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }
+          th = t('views.admin.categories.fields.title')
+          th = t('views.admin.categories.fields.abbr')
+          th
+      tbody
+        - @categories.each do | category |
+          tr
+            td
+              = link_to category.name, admin_category_sensors_path(category)
+            td
+              = category.abbr
+            td
+              span<>
+                = link_to t('actions.edit'), edit_admin_category_path(category)
+              span<>
+                = link_to t('actions.delete'), admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }
+- else
+    div = t('views.admin.categories.index.no_categories')

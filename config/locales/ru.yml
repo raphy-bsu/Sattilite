@@ -1,47 +1,69 @@
 ---
 ru:
   actions:
-    back: Назад
-    clear_all: Очистить все
-    delete: Удалить
-    edit: Править
-    login: Войти
-    logout: Выйти
-    new: Добавить
-    save: Сохранить
-    show: Показать
-    toggle: Переключить
+    back: "Назад"
+    clear_all: "Очистить все"
+    delete: "Удалить"
+    edit: "Править"
+    login: "Войти"
+    logout: "Выйти"
+    new: "Добавить"
+    save: "Сохранить"
+    show: "Показать"
+    toggle: "Переключить"
   admin:
     posts:
       index:
-        title: Заголовок
+        title: "Заголовок"
     sensors:
       index:
-        new: Добавить датчик
+        new: "Добавить датчик"
+  common:
+    help: Помощь
   views:
     admin:
+      categories:
+        actions:
+          new: "Добавить"
+        fields:
+          abbr: ID
+          title: "Название"
+        index:
+          no_categories: "Категории отсутствуют, добавьте категорию"
+          title: "Категории датчиков"
+      messages:
+        fields:
+          body: "Сообщение"
+          date: "Дата"
+          email: Email
+          name: "Имя отправителя"
+        index:
+          no_messages: "Пока что нет сообщений"
+          title: "Сообщения от гостей"
       nav:
-        blog: Блог
-        categories: Категории датчиков
-        dashboard: Панель управления
-        messages: Сообщения
+        blog: "Блог"
+        categories: "Категории датчиков"
+        dashboard: "Панель управления"
+        messages: "Сообщения"
       posts:
         fields:
-          body: Содержание
-          title: Заголовок
+          body: "Содержание"
+          title: "Заголовок"
         index:
-          title: Блог
+          no_posts: "Блог пуст, напишите что-нибудь"
+          title: "Блог"
       sensors:
         actions:
-          name: Название
+          name: "Название"
         index:
-          new: Добавить датчик
-          title: Датчики
+          new: "Добавить датчик"
+          no_sensors: "Нету датчиков, добавьте"
+          title: "Датчики"
       values:
         index:
-          no_values: Данные телеметрии еще не загружены
+          no_values: "Данные телеметрии еще не загружены"
     layouts:
       admin:
-        title: Панель администратора
+        title: "Панель администратора"
       application:
-        title: Спутник БГУ
+        title: "Спутник БГУ"

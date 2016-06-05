@@ -1,5 +1,7 @@
 ---
 en:
+  common:
+    help: Help
   actions:
     back: Back
     clear_all: Clear all
@@ -20,6 +22,24 @@ en:
         new: New
   views:
     admin:
+      categories:
+        actions:
+          new: New
+        fields:
+          abbr: ID
+          title: Title
+        index:
+          no_categories: No sensor categories, add new category
+          title: Categories
+      messages:
+        fields:
+          body: Body
+          date: Date
+          email: Email
+          name: Name
+        index:
+          no_messages: No messages yet
+          title: Messages from guests
       nav:
         blog: Blog
         categories: Sensor categories
@@ -30,12 +50,14 @@ en:
           body: Content
           title: Title
         index:
+          no_posts: No posts yet
           title: Posts
       sensors:
         actions:
           name: Name
         index:
           new: New sensor
+          no_sensors: No sensors yet, please add sensors for this category.
           title: Sensors
       values:
         index:
