@@ -27,7 +27,7 @@ ru:
         actions:
           new: "Добавить"
         edit:
-          title: Правка категории
+          title: "Правка категории"
         fields:
           abbr: ID
           title: "Название"
@@ -58,6 +58,9 @@ ru:
       sensors:
         actions:
           name: "Название"
+        fields:
+          abbr: ID
+          measure: Единицы измерения
         index:
           new: "Добавить датчик"
           no_sensors: "Нету датчиков, добавьте"

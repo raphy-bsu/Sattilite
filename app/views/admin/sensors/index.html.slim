@@ -14,8 +14,8 @@ ol.breadcrumb style=("margin-top: 10px;")
       thead
         tr
           th = t('views.admin.sensors.actions.name')
-          th ID
-          th Ед. измерения
+          th = t('views.admin.sensors.fields.abbr')
+          th = t('views.admin.sensors.fields.measure')
           th
           th
       tbody
@@ -32,4 +32,4 @@ ol.breadcrumb style=("margin-top: 10px;")
             td
               = link_to t('actions.delete'), admin_category_sensor_path(@category, sensor), method: :delete, data: { confirm: 'Are you sure?' }
 - else
-  div Please, add sensors
+  div = t('views.admin.sensors.index.no_sensors')
