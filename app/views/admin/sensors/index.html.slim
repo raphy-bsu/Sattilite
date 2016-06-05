@@ -2,9 +2,12 @@ ol.breadcrumb style=("margin-top: 10px;")
   li = @category.name
 
 .page-header
-  = link_to new_admin_category_sensor_path, class: 'btn btn-primary pull-right' do
-    span.glyphicon.glyphicon-plus
-    = t('.new')
+  span.pull-right.btn-group
+    = link_to new_admin_category_sensor_path, class: 'btn btn-default' do
+      span.glyphicon.glyphicon-plus
+      = t('.new')
+    = link_to '#', class: 'btn btn-success hint--bottom', :'data-hint' => t('common.help') do
+      i.fa.fa-fw.fa-question-circle
 
   h1 = @category.name
 
