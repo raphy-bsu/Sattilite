@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   scope module: 'public' do
     resources :posts, only: [:index, :show]
-    resources :messages, only: [:new, :create]
+    resources :messages, only: [:create]
   end
 
   authenticate do
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root to: 'posts#index'
 
-      resources :messages, except: [:edit]
+      resources :messages, except: [:edit, :create, :update]
       resources :posts
 
       resources :categories do
