@@ -60,7 +60,8 @@ ru:
           name: "Название"
         fields:
           abbr: ID
-          measure: Единицы измерения
+          measure: "Единицы измерения"
+          values_count: Values count
         index:
           new: "Добавить датчик"
           no_sensors: "Нету датчиков, добавьте"

@@ -58,13 +58,14 @@ en:
       sensors:
         actions:
           name: Name
+        fields:
+          abbr: ID
+          measure: Units
+          values_count: Количество пакетов
         index:
           new: New sensor
           no_sensors: No sensors yet, please add sensors for this category.
           title: Sensors
-        fields:
-          abbr: ID
-          measure: Units
       values:
         index:
           no_values: No values loaded yet, please, wait for telemetry from satellite
