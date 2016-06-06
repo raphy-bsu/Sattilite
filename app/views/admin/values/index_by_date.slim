@@ -1,0 +1,27 @@
+ol.breadcrumb style=("margin-top: 10px;")
+  li
+    a href=admin_category_sensors_path(@category)  = @category.name
+  li
+    a href=admin_category_sensor_values_path(@category, @sensor)  = @sensor.name
+
+= form_tag index_by_date_admin_category_sensor_values_path, method: :get do |f|
+      .col-md-2
+        = text_field_tag :from, params[:from], class: 'datetimepicker form-control', placeholder: 'From'
+      .col-md-2
+        = text_field_tag :to, params[:to], class: 'datetimepicker form-control', placeholder: 'To'
+      = submit_tag "Search", class: 'btn btn-primary'
+
+.page-header
+  = link_to destroy_all_admin_category_sensor_values_path(@category, @sensor),
+          method: :delete,
+          data: { confirm: 'Are you sure?' },
+          class: 'btn btn-danger pull-right' do
+    i.fa.fa-fw.fa-trash
+    = t('actions.clear_all')
+  h1 = @sensor.name
+
+  - if @values.size > 0
+
+    = column_chart @values.map{|p| [Time.at(p.time).strftime("%T %F"), p.get_value]},
+            xtitle: "Time, c",
+            ytitle: @sensor.name+", "+@sensor.measure.to_s

@@ -24,6 +24,7 @@ Rails.application.routes.draw do
         resources :sensors do
           resources :values do
             delete :destroy_all, on: :collection
+            get :index_by_date, on: :collection
           end
         end
       end

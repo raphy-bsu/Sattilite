@@ -54,6 +54,16 @@ class Admin::ValuesController < Admin::AdminController
     end
   end
 
+  def index_by_date
+    from = (params[:from].to_datetime || Time.now).to_i
+    to = (params[:to].to_datetime || Time.now).to_i
+    @values = @sensor.values.where('time > ?', from).where('time < ?', to)
+    respond_to do |format|
+      format.html
+      format.csv  { render csv: @values, only: [:value, :time] }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_value
