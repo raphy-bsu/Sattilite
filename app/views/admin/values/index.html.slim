@@ -38,20 +38,21 @@ div
   .text-center
     = will_paginate @values, renderer: BootstrapPagination::Rails
 
-  .table-responsive
-    table.table.table-striped.table-bordered.table-hover
-      thead
-        tr
-          th Time, c
-          th
-            span<> Value,
-            = @sensor.measure
-      tbody
-        - @values.each do | value |
+  - if current_user.admin?
+    .table-responsive
+      table.table.table-striped.table-bordered.table-hover
+        thead
           tr
-            td
-              = Time.at(value.time).to_datetime
-            td
-              = value.get_value
+            th Time, c
+            th
+              span<> Value,
+              = @sensor.measure
+        tbody
+          - @values.each do | value |
+            tr
+              td
+                = Time.at(value.time).to_datetime
+              td
+                = value.get_value
 - else
   div = t('views.admin.values.index.no_values')
