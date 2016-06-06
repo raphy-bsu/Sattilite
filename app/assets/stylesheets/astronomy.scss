@@ -181,48 +181,50 @@ img {
 	margin: 18px 0;
 }
 /** adbox **/
-#adbox {
+#box {
 	background: #020a13 image-url('bg-adbox.jpg') no-repeat center top;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	min-height: 433px;
 	margin: -56px 0 22px;
+    background-size: 100%;
+
 /** Needed for IE7 **/
 *margin: 0;
 *position: relative;
 *top: -56px;
 }
-#adbox .wrapper {
+#box .wrapper {
 	width: 940px;
 	padding: 54px 10px 26px;
 }
-#adbox .info {
+#box .info {
 	height: 354px;
 	width: 330px;
 	overflow: hidden;
 }
-#adbox h1 {
+#box h1 {
 	color: #ffffff;
 	font-size: 48px;
 	font-style: italic;
 	line-height: 50px;
 	margin-bottom: 30px;
 }
-#adbox p {
+#box p {
 	color: #176eb0;
 	font-size: 14px;
 	line-height: 24px;
 }
-#adbox p a {
+#box p a {
 	color: #176eb0;
 }
-#adbox div.highlight {
+#box div.highlight {
 	background: #171a1a image-url('adbox-bg-heading.jpg') repeat-x left top;
 	min-height: 82px;
 	border-color: #000;
 	border-style: solid none;
 	border-width: 1px;
 }
-#adbox div.highlight h2 {
+#box div.highlight h2 {
 	color: #484b4b;
 	font-size: 34px;
 	line-height: 82px;
@@ -231,7 +233,7 @@ img {
 	padding: 0 10px;
 	text-shadow: -3px 0 3px #121413;
 }
-#adbox div.highlight h2 i {
+#box div.highlight h2 i {
 	font-weight: normal;
 }
 /** main **/
