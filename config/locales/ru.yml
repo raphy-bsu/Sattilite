@@ -13,20 +13,23 @@ ru:
     toggle: "Переключить"
   activerecord:
     attributes:
+      category:
+        abbr: ID
+        name: Название
       sensor:
         abbr: ID
-        measure: Единица измерения
-        name: Название
-        val_type: Тип значения
+        measure: "Единица измерения"
+        name: "Название"
+        val_type: "Тип значения"
       value:
-        get_value: Значение
+        get_value: "Значение"
     models:
-      category: Категория датчика
-      message: Сообщение
-      post: Запись в блоге
-      sensor: Датчик
-      user: Пользователь
-      value: Значение
+      category: "Категория датчика"
+      message: "Сообщение"
+      post: "Запись в блоге"
+      sensor: "Датчик"
+      user: "Пользователь"
+      value: "Значение"
   admin:
     posts:
       index:
