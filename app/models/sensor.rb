@@ -23,6 +23,7 @@ class Sensor < ActiveRecord::Base
   validates :category_id, presence: true
   validates :val_type, presence: true
   validates :name, uniqueness: true, presence: true
+  validates :abbr, uniqueness: true, presence: true
 
   enum val_type: [:float, :integer, :string, :boolean]
 

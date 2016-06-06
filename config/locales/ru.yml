@@ -11,6 +11,22 @@ ru:
     save: "Сохранить"
     show: "Показать"
     toggle: "Переключить"
+  activerecord:
+    attributes:
+      sensor:
+        abbr: ID
+        measure: Единица измерения
+        name: Название
+        val_type: Тип значения
+      value:
+        get_value: Значение
+    models:
+      category: Категория датчика
+      message: Сообщение
+      post: Запись в блоге
+      sensor: Датчик
+      user: Пользователь
+      value: Значение
   admin:
     posts:
       index:
@@ -20,9 +36,9 @@ ru:
         new: "Добавить датчик"
   common:
     are_you_sure: "Вы уверены?"
-    from: От
+    from: "От"
     help: "Помощь"
-    to: До
+    to: "До"
   views:
     admin:
       categories:
@@ -70,7 +86,7 @@ ru:
           no_sensors: "Нету датчиков, добавьте"
           title: "Датчики"
         new:
-          title: Новый датчик
+          title: "Новый датчик"
       values:
         index:
           no_values: "Данные телеметрии еще не загружены"

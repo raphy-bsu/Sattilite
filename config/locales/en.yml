@@ -11,6 +11,22 @@ en:
     save: Save
     show: Show
     toggle: Toggle
+  activerecord:
+    models:
+      user: User
+      value: Value
+      sensor: Sensor
+      category: Sensor category
+      post: Post
+      message: Message
+    attributes:
+      value:
+        get_value: Value
+      sensor:
+        name: Name
+        abbr: ID
+        measure: Measure unit
+        val_type: Value type
   admin:
     posts:
       index:
