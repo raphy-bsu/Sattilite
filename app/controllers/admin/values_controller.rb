@@ -14,39 +14,6 @@ class Admin::ValuesController < Admin::AdminController
     end
   end
 
-  def show
-  end
-
-  def new
-    @value = Value.new
-  end
-
-  def edit
-  end
-
-  def create
-    @value = Value.new(value_params)
-    @value.sensor = @sensor
-
-    respond_to do |format|
-      if @value.save
-        format.html { redirect_to admin_category_sensor_values_path(@category, @sensor), notice: 'Value was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @value.update(value_params)
-        format.html { redirect_to admin_category_sensor_values_path(@category, @sensor), notice: 'Value was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
-  end
-
   def destroy
     @value.destroy
     respond_to do |format|
@@ -59,9 +26,6 @@ class Admin::ValuesController < Admin::AdminController
     respond_to do |format|
       format.html { redirect_to admin_category_sensor_values_path(@category, @sensor), notice: 'Value was successfully destroyed.' }
     end
-  end
-
-  def index_by_date
   end
 
   private

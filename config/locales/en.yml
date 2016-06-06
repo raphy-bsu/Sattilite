@@ -64,7 +64,7 @@ en:
         fields:
           abbr: ID
           measure: Units
-          values_count: "Количество пакетов"
+          values_count: Values count
         index:
           new: New sensor
           no_sensors: No sensors yet, please add sensors for this category.

@@ -64,7 +64,7 @@ ru:
         fields:
           abbr: ID
           measure: "Единицы измерения"
-          values_count: Values count
+          values_count: "Количество пакетов"
         index:
           new: "Добавить датчик"
           no_sensors: "Нету датчиков, добавьте"
