@@ -38,4 +38,8 @@ class Value < ActiveRecord::Base
     end
 
   end
+
+  def formatted_time
+    Time.at(time).strftime("%F %T")
+  end
 end
