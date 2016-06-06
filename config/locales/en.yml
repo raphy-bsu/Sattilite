@@ -20,7 +20,9 @@ en:
         new: New
   common:
     are_you_sure: Are you sure?
+    from: From
     help: Help
+    to: To
   views:
     admin:
       categories:

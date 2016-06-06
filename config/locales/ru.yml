@@ -20,7 +20,9 @@ ru:
         new: "Добавить датчик"
   common:
     are_you_sure: "Вы уверены?"
+    from: От
     help: "Помощь"
+    to: До
   views:
     admin:
       categories:
@@ -30,7 +32,7 @@ ru:
           title: "Правка категории"
         fields:
           abbr: ID
-          sensors_count: Количество датчиков
+          sensors_count: "Количество датчиков"
           title: "Название"
         index:
           no_categories: "Категории отсутствуют, добавьте категорию"

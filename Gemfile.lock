@@ -319,6 +319,8 @@ GEM
     rake (11.1.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    render_csv (2.0.0)
+      rails (>= 3.0)
     require_all (1.3.3)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
@@ -444,6 +446,7 @@ DEPENDENCIES
   rails-assets-underscore!
   rails_best_practices
   rake
+  render_csv
   rest-client
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

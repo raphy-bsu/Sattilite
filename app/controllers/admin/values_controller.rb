@@ -4,7 +4,13 @@ class Admin::ValuesController < Admin::AdminController
   before_action :set_sensor
 
   def index
-    @values = @sensor.values.paginate(:page => params[:page], :per_page => 30)
+    from =  params[:from].present? ? params[:from].to_datetime.to_i : 0
+    to = params[:to].present? ? params[:to].to_datetime.to_i : Time.now.to_i
+    @values = @sensor.values.where('time > ?', from).where('time < ?', to).paginate(:page => params[:page], :per_page => 30)
+    respond_to do |format|
+      format.html
+      format.csv  { render csv: @values, only: [:value, :time] }
+    end
   end
 
   def show
@@ -55,13 +61,6 @@ class Admin::ValuesController < Admin::AdminController
   end
 
   def index_by_date
-    from = (params[:from].to_datetime || Time.now).to_i
-    to = (params[:to].to_datetime || Time.now).to_i
-    @values = @sensor.values.where('time > ?', from).where('time < ?', to)
-    respond_to do |format|
-      format.html
-      format.csv  { render csv: @values, only: [:value, :time] }
-    end
   end
 
   private
