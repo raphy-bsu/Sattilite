@@ -11,6 +11,14 @@ class ApplicationController < ActionController::Base
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
 
+  def after_sign_in_path_for(resource)
+    if current_user.admin?
+      admin_categories_path
+    else
+      root_path
+    end
+  end
+
   private
   def extract_locale_from_accept_language_header
     request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
