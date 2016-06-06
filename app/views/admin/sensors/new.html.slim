@@ -1,8 +1,8 @@
 .page-header
-  = link_to admin_category_sensors_path, class: 'btn btn-default' do
-    span.glyphicon.glyphicon-list-alt
-    |  Back
-  h1
-    | New sensor
+  span.pull-right
+    = link_to admin_category_sensors_path, class: 'btn btn-default' do
+      i.fa.fa-fw.fa-arrow-left
+      = t('actions.back')
+  h1 = t('views.admin.sensors.new.title')
 
 = render 'form'

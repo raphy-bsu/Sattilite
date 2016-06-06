@@ -66,9 +66,11 @@ en:
           measure: Units
           values_count: Values count
         index:
-          new: New sensor
+          new: Add sensor
           no_sensors: No sensors yet, please add sensors for this category.
           title: Sensors
+        new:
+          title: New sensor
       values:
         index:
           no_values: No values loaded yet, please, wait for telemetry from satellite
