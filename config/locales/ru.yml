@@ -71,6 +71,7 @@ ru:
         categories: "Категории датчиков"
         dashboard: "Панель управления"
         messages: "Сообщения"
+        users: "Пользователи"
       posts:
         fields:
           body: "Содержание"
@@ -91,6 +92,16 @@ ru:
           title: "Датчики"
         new:
           title: "Новый датчик"
+      users:
+        actions:
+          new: Добавить пользователя
+        fields:
+          email: Email
+          name: Имя
+          role: Роль
+        index:
+          no_users: Пользователи отсутствуют
+          title: Пользователи
       values:
         index:
           no_values: "Данные телеметрии еще не загружены"

@@ -1,0 +1,33 @@
+.page-header
+  span.btn-group.pull-right
+    = link_to new_admin_user_path, class: 'btn btn-default', title: t('common.help') do
+      span.glyphicon.glyphicon-plus
+      = t('views.admin.users.actions.new')
+      = link_to '#', class: 'btn btn-success hint--bottom', :'data-hint' => t('common.help') do
+        i.fa.fa-fw.fa-question-circle
+  h1
+    = t('views.admin.users.index.title')
+
+- unless @users.empty?
+  .table-responsive
+    table.table.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th = t('views.admin.users.fields.name')
+          th = t('views.admin.users.fields.email')
+          th = t('views.admin.users.fields.role')
+          th
+      tbody
+        - @users.each do | user |
+          tr
+            td
+              = user.name
+            td
+              = user.email
+            td
+              = user.role
+            td
+              span<>
+                = link_to t('actions.delete'), admin_user_path(user), method: :delete, data: { confirm: t('common.are_you_sure') }
+- else
+    div = t('views.admin.users.index.no_users')

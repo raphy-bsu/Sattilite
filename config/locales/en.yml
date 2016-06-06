@@ -71,6 +71,7 @@ en:
         categories: Sensor categories
         dashboard: Dashboard
         messages: Messages
+        users: Users
       posts:
         fields:
           body: Content
@@ -91,6 +92,16 @@ en:
           title: Sensors
         new:
           title: New sensor
+      users:
+        actions:
+          new: New
+        fields:
+          email: Email
+          name: Name
+          role: Role
+        index:
+          no_users: No users
+          title: Users
       values:
         index:
           no_values: No values loaded yet, please, wait for telemetry from satellite
