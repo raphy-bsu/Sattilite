@@ -9,13 +9,14 @@ ru:
     logout: "Выйти"
     new: "Добавить"
     save: "Сохранить"
+    send: "Отправить"
     show: "Показать"
     toggle: "Переключить"
   activerecord:
     attributes:
       category:
         abbr: ID
-        name: Название
+        name: "Название"
       sensor:
         abbr: ID
         measure: "Единица измерения"

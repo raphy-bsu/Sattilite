@@ -9,27 +9,28 @@ en:
     logout: Logout
     new: New
     save: Save
+    send: Send
     show: Show
     toggle: Toggle
   activerecord:
-    models:
-      user: User
-      value: Value
-      sensor: Sensor
-      category: Sensor category
-      post: Post
-      message: Message
     attributes:
-      value:
-        get_value: Value
-      sensor:
+      category:
+        abbr: ID
         name: Name
+      sensor:
         abbr: ID
         measure: Measure unit
-        val_type: Value type
-      category:
         name: Name
-        abbr: ID
+        val_type: Value type
+      value:
+        get_value: Value
+    models:
+      category: Sensor category
+      message: Message
+      post: Post
+      sensor: Sensor
+      user: User
+      value: Value
   admin:
     posts:
       index:

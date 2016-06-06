@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
       resources :messages, except: [:edit, :create, :update]
       resources :posts
+      resources :users
 
       resources :categories do
         resources :sensors do
