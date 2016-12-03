@@ -1,7 +1,8 @@
-.main
-  h1
-    = @post.title
-  span.time
-    = @post.created_at.strftime("%d %b %Y")
-  p
-    = @post.body.try(:html_safe)
+.wrapper
+  .main
+    h1
+      = @post.title
+    span.time
+      = @post.created_at.strftime("%d %b %Y")
+    p
+      = @post.body.try(:html_safe)
