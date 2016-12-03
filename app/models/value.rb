@@ -26,6 +26,8 @@ class Value < ActiveRecord::Base
 
   validates_presence_of :time
 
+  after_create :remove_outdated_values
+
   def get_value
     case self.sensor.val_type
       when 'float'
@@ -40,6 +42,12 @@ class Value < ActiveRecord::Base
         raise Exception, "This type is not supported"
     end
 
+  end
+
+  def remove_outdated_values
+    if Value.all.size > LIMIT
+      Value.order(created_at: :asc).limit(AMOUNT_TO_REMOVE).destroy_all
+    end
   end
 
   def formatted_time
