@@ -17,6 +17,9 @@ en:
       category:
         abbr: ID
         name: Name
+      post:
+        body: Content
+        title: Title
       sensor:
         abbr: ID
         measure: Measure unit
