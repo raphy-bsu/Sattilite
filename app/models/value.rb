@@ -19,8 +19,8 @@
 #
 
 class Value < ActiveRecord::Base
-  LIMIT = 8000
-  AMOUNT_TO_REMOVE = 2000
+  LIMIT = 4000
+  AMOUNT_TO_REMOVE = 1000
 
   belongs_to :sensor
 
