@@ -1,0 +1,16 @@
+h1
+  = t('.current_limit_state')
+  |:
+
+  span<>
+    span = @values_count
+    span = '/'
+    span = @values_limit
+
+
+  = link_to destroy_all_values_admin_service_index_path,
+          method: :delete,
+          data: { confirm: t('common.are_you_sure') },
+          class: 'btn btn-danger pull-right' do
+    i.fa.fa-fw.fa-trash
+    = t('actions.clear_all')

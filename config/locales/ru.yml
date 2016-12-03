@@ -38,6 +38,9 @@ ru:
     sensors:
       index:
         new: "Добавить датчик"
+    service:
+      index:
+        current_limit_state: Состояние лимита базы данных
   common:
     are_you_sure: "Вы уверены?"
     from: "От"
@@ -71,6 +74,7 @@ ru:
         categories: "Категории датчиков"
         dashboard: "Панель управления"
         messages: "Сообщения"
+        system: "Система"
         users: "Пользователи"
       posts:
         fields:
@@ -80,7 +84,7 @@ ru:
         actions:
           name: "Название"
         edit:
-          title: Править датчик
+          title: "Править датчик"
         fields:
           abbr: ID
           measure: "Единицы измерения"

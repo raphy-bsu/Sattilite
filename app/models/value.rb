@@ -19,6 +19,9 @@
 #
 
 class Value < ActiveRecord::Base
+  LIMIT = 8000
+  AMOUNT_TO_REMOVE = 2000
+
   belongs_to :sensor
 
   validates_presence_of :time

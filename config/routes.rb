@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       resources :messages, except: [:edit, :create, :update]
       resources :posts
       resources :users
+      resources :service, path: 'system', only: [:index] do
+        delete :destroy_all_values, on: :collection
+      end
 
       resources :categories, except: [:show] do
         resources :sensors, except: [:show] do

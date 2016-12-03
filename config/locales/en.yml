@@ -38,6 +38,9 @@ en:
     sensors:
       index:
         new: New
+    service:
+      index:
+        current_limit_state: Current limit state
   common:
     are_you_sure: Are you sure?
     from: From
@@ -71,6 +74,7 @@ en:
         categories: Sensor categories
         dashboard: Dashboard
         messages: Messages
+        system: System
         users: Users
       posts:
         fields:
