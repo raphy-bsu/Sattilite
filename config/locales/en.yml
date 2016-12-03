@@ -76,20 +76,17 @@ en:
         fields:
           body: Content
           title: Title
-        index:
-          no_posts: No posts yet
-          title: Posts
       sensors:
         actions:
           name: Name
+        edit:
+          title: Title
         fields:
           abbr: ID
           measure: Units
           values_count: Values count
         index:
-          new: Add sensor
           no_sensors: No sensors yet, please add sensors for this category.
-          title: Sensors
         new:
           title: New sensor
       users:
@@ -105,8 +102,3 @@ en:
       values:
         index:
           no_values: No values loaded yet, please, wait for telemetry from satellite
-    layouts:
-      admin:
-        title: Admin Dashboard
-      application:
-        title: Sputnik BSU

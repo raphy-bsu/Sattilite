@@ -1,0 +1,9 @@
+ignore_unused:
+  - 'number.*'
+  - 'date.formats.*'
+  - 'time.formats.*'
+  - 'activerecord.*'
+  - 'activemodel.*'
+  - '*.shared.*'
+  - '*.common_fields.*'
+  - '{devise,kaminari,will_paginate,errors,helpers}.*'

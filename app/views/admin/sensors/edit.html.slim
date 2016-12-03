@@ -1,8 +1,7 @@
 .page-header
   = link_to admin_category_sensors_path(@category), class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back
-  h1
-    | Editing sensor
+    = t('actions.back')
+  h1 = t('views.admin.sensors.edit.title')
 
 = render 'form'

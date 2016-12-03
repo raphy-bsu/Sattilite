@@ -8,5 +8,5 @@
     = f.input :abbr
 
   .col-md-2
-    label.control-label.label-hidden Сохранить
-    = f.button :submit, 'Сохранить', class: 'btn btn-success'
+    label.control-label.label-hidden = t('actions.save')
+    = f.button :submit, t('actions.save'), class: 'btn btn-success'

@@ -30,6 +30,6 @@
               span<>
                 = link_to t('actions.edit'), edit_admin_category_path(category)
               span<>
-                = link_to t('actions.delete'), admin_category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }
+                = link_to t('actions.delete'), admin_category_path(category), method: :delete, data: { confirm: t('common.are_you_sure') }
 - else
     div = t('views.admin.categories.index.no_categories')

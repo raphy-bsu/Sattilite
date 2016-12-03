@@ -76,37 +76,29 @@ ru:
         fields:
           body: "Содержание"
           title: "Заголовок"
-        index:
-          no_posts: "Блог пуст, напишите что-нибудь"
-          title: "Блог"
       sensors:
         actions:
           name: "Название"
+        edit:
+          title: Править датчик
         fields:
           abbr: ID
           measure: "Единицы измерения"
           values_count: "Количество пакетов"
         index:
-          new: "Добавить датчик"
           no_sensors: "Нету датчиков, добавьте"
-          title: "Датчики"
         new:
           title: "Новый датчик"
       users:
         actions:
-          new: Добавить пользователя
+          new: "Добавить пользователя"
         fields:
           email: Email
-          name: Имя
-          role: Роль
+          name: "Имя"
+          role: "Роль"
         index:
-          no_users: Пользователи отсутствуют
-          title: Пользователи
+          no_users: "Пользователи отсутствуют"
+          title: "Пользователи"
       values:
         index:
           no_values: "Данные телеметрии еще не загружены"
-    layouts:
-      admin:
-        title: "Панель администратора"
-      application:
-        title: "Спутник БГУ"

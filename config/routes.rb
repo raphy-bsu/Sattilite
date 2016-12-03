@@ -21,8 +21,8 @@ Rails.application.routes.draw do
       resources :posts
       resources :users
 
-      resources :categories do
-        resources :sensors do
+      resources :categories, except: [:show] do
+        resources :sensors, except: [:show] do
           resources :values, only: [:index, :destroy] do
             delete :destroy_all, on: :collection
           end
