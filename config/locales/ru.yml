@@ -14,12 +14,12 @@ ru:
     toggle: "Переключить"
   activerecord:
     attributes:
-      post:
-        title: Название
-        body: Содержание
       category:
         abbr: ID
         name: "Название"
+      post:
+        body: "Содержание"
+        title: "Название"
       sensor:
         abbr: ID
         measure: "Единица измерения"
@@ -43,12 +43,23 @@ ru:
         new: "Добавить датчик"
     service:
       index:
-        current_limit_state: Состояние лимита базы данных
+        current_limit_state: "Состояние лимита базы данных"
   common:
     are_you_sure: "Вы уверены?"
     from: "От"
     help: "Помощь"
     to: "До"
+  layouts:
+    admin:
+      views:
+        admin:
+          nav:
+            pages: Pages
+  public:
+    posts:
+      index:
+        news: Новости
+        read_more: "Подробнее..."
   views:
     admin:
       categories:
@@ -77,6 +88,7 @@ ru:
         categories: "Категории датчиков"
         dashboard: "Панель управления"
         messages: "Сообщения"
+        pages: "Страницы"
         system: "Система"
         users: "Пользователи"
       posts:

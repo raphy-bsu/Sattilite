@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
       resources :messages, except: [:edit, :create, :update]
       resources :posts
+      resources :pages
       resources :users
       resources :service, path: 'system', only: [:index] do
         delete :destroy_all_values, on: :collection
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
   end
 
   root 'public#index'
-  get '/about', to: 'public#about'
+  get '/pages/:id', to: 'public/pages#show'
+  get '/about', to: 'public/pages#about'
   get '/contact_us', to: 'public#contact_us'
 end

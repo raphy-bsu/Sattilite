@@ -9,7 +9,7 @@
         = fancyimage('gallery/img3.jpg')
   .main
     h1
-      | Blog
+      = t('.news')
     ul.list
       - @posts.each do |p|
         li
@@ -20,6 +20,6 @@
           p
             = p.body.truncate(300).try(:html_safe)
           a.more href=post_url(p)
-            | Read more>>
+            = t('.read_more')
 
     = will_paginate @posts

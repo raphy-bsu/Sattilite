@@ -1,0 +1,11 @@
+= simple_form_for([:admin, @page]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :content, input_html: { class: 'summernote' }
+
+  .form-actions
+    = f.button :submit, t('actions.save'), class: 'btn btn-success'
+
+  br

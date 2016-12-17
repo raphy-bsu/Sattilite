@@ -51,7 +51,16 @@ html
                 a href=admin_service_index_path
                   i.fa.fa-cog.fa-fw
                   = t('views.admin.nav.system')
-
+              li
+                a href="#"
+                  i.fa.fa-file-o.fa-fw
+                  = t('views.admin.nav.pages')
+                  span.fa.arrow
+                ul.nav.nav-second-level.collapse aria-expanded="true"
+                  - Page.all.each do |page|
+                    li
+                      a href=url_for([:edit, :admin, page]) = page.title
+      /! /.nav-second-level
       #page-wrapper style=('min-height: 183px;')
         .container-fluid
           .row.content-wrapper

@@ -1,0 +1,10 @@
+.wrapper.clearfix
+  #sidebar
+    ul
+      li
+        =  image_tag("logo/raphy_main.png", height: 154, width: 213)
+        = link_to "Raphy Team", "http://github.com/raphy-bsu/" , class: 'btn1 center'
+  .main
+    h1 = @page.title
+    .content-wrapper
+      == @page.content

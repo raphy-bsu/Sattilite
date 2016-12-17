@@ -49,6 +49,17 @@ en:
     from: From
     help: Help
     to: To
+  layouts:
+    admin:
+      views:
+        admin:
+          nav:
+            pages: Pages
+  public:
+    posts:
+      index:
+        news: News
+        read_more: Read more
   views:
     admin:
       categories:
@@ -77,6 +88,7 @@ en:
         categories: Sensor categories
         dashboard: Dashboard
         messages: Messages
+        pages: Pages
         system: System
         users: Users
       posts:
