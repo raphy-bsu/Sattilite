@@ -4,5 +4,5 @@
       = @post.title
     span.time
       = @post.created_at.strftime("%d %b %Y")
-    p
+    .content-wrapper
       = @post.body.try(:html_safe)
