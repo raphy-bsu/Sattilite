@@ -24,7 +24,7 @@ class Value < ActiveRecord::Base
 
   belongs_to :sensor
 
-  validates_presence_of :time
+  validates_presence_of :time, :sensor
 
   after_create :remove_outdated_values
 

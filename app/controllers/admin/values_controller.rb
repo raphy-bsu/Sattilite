@@ -6,7 +6,7 @@ class Admin::ValuesController < Admin::AdminController
   def index
     from =  params[:from].present? ? params[:from].to_datetime.to_i : 0
     to = params[:to].present? ? params[:to].to_datetime.to_i : Time.now.to_i
-    unpagindated = @sensor.values.where('time > ?', from).where('time < ?', to)
+    unpagindated = @sensor.values.where('time > ?', from).where('time < ?', to).order(created_at: :desc)
     @values = unpagindated.paginate(:page => params[:page], :per_page => 30)
     respond_to do |format|
       format.html
